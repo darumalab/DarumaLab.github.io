@@ -1,0 +1,34 @@
+---
+date: "2017-05-02"
+title: "Nesting and Accessing Data in d3v4"
+author: "Amber Thomas"
+showonlyimage: true
+draft: false
+image: "blog/img/d3Nest.png"
+weight: 0
+type: "post"
+description: "My explorations of d3's nesting functions"
+---
+
+-   [Introduction](#introduction)
+-   [Before Nesting](#before-nesting)
+-   [Nest Level 1](#nest-level-1)
+-   [Rollup Level 1](#rollup-level-1)
+    -   [Sorting Keys](#sorting-keys)
+-   [Nest Level 2](#nest-level-2)    
+    -   [Styling Nested Elements](#styling-nested-elements)
+-   [Creating Dropdown Menus from 1st Level Nests](#creating-dropdown-menus-from-1st-level-nests)
+-   [Rollup Level 2](#rollup-level-2)
+-   [Creating Dropdown Menus from 2nd Level Nests](#creating-dropdown-menus-from-2nd-level-nests)
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy.opts = list(width.cutoff = 60),
+                      tidy = TRUE)
+```
+
+```{r, include = FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+# Introduction
