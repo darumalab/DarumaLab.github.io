@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Baker St.</title>
+    <title>R on Baker Street</title>
     <link>https://darumalab.github.io/categories/r/</link>
-    <description>Recent content in R on Baker St.</description>
+    <description>Recent content in R on Baker Street</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2016 Daruma Lab</copyright>
