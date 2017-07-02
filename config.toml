@@ -1,5 +1,5 @@
 baseurl = "https://darumalab.github.io/"
-title = "Baker St."
+title = "Baker Street"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "ja"
 # Enable comments by entering your Disqus shortname

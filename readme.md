@@ -4,5 +4,6 @@ GitHub PagesにHugoを使った静的サイト(Static Site)を公開していま
 
 You can learn more about this package at:
 https://github.com/rstudio/blogdown
-This article was particulary useful for learning workflow from step by step.
-https://proquestionasker.github.io/blog/Making_Site/
+This article was particulary useful for learning workflow from step by step
+https://hjdskes.github.io/blog/update-deploying-hugo-on-personal-gh-pages/
+https://proquestionasker.github.io/blog/Making_Site/  
