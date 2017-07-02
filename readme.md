@@ -4,7 +4,7 @@ My first attempt to build a data analysis site hosted thoguh GitHub using a R Pa
 
 GitHub PagesにHugoを使った静的サイト(Static Site)を公開しています。R言語のblogdownパッケージを使って、RStudioで作成したMarkdownファイルからウェブサイトのコンテンツを生成することができます。 
 
-![screenshot](hhttps://darumalab.github.io/img/site_screen.png)  
+![screenshot](https://github.com/darumalab/darumalab.github.io/blob/sources/static/img/site_screen.png)  
 
 
 ## Thanks
