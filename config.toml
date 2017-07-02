@@ -1,5 +1,5 @@
 baseurl = "https://darumalab.github.io/"
-title = "Making Data Fun"
+title = "Baker St."
 theme = "hugo-creative-portfolio-theme"
 languageCode = "ja"
 # Enable comments by entering your Disqus shortname
@@ -35,9 +35,9 @@ googleAnalytics = "UA-101594477-1"
   name = "Home"
   url = ""
 
-  [[params.navlinks]]
-  name = "Blog"
-  url = "blog/"
+  #[[params.navlinks]]
+  #name = "Blog"
+  #url = "blog/"
 
   #[[params.navlinks]]
   # name = "About"

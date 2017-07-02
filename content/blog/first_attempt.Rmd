@@ -1,7 +1,27 @@
 ---
+date: "2017-05-02"
 title: "A Plain Markdown Post"
-date: "2016-12-30T21:49:57-07:00"
+author: "Joe Saito"
+showonlyimage: true
+draft: false
+image: "blog/img/markdown.png"
+weight: 0
+type: "post"
+description: "test"
 ---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy.opts = list(width.cutoff = 60),
+                      tidy = TRUE)
+```
+
+```{r, include = FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+# Introduction
+
 
 This is a post written in plain Markdown (`*.md`) instead of R Markdown (`*.Rmd`). The major differences are:
 
