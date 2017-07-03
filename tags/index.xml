@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2016 Daruma Lab</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darumalab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Logistic</title>
+      <link>https://darumalab.github.io/tags/logistic/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/tags/logistic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Plot</title>
       <link>https://darumalab.github.io/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/tags/plot/</guid>
       <description></description>
@@ -24,7 +33,7 @@
     <item>
       <title>R Markdown</title>
       <link>https://darumalab.github.io/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/tags/r-markdown/</guid>
       <description></description>
@@ -33,7 +42,7 @@
     <item>
       <title>Regression</title>
       <link>https://darumalab.github.io/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/tags/regression/</guid>
       <description></description>

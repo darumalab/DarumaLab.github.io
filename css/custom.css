@@ -140,7 +140,7 @@ SIDEBAR + RIGHT COLUMN
   margin-top: 10px;
 }
 .small-navbar-heading a {
-  /* color: #000;*/
+  color: #000;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -198,8 +198,32 @@ OFF-CANVAS SIDEBAR BEHAVIOUR
   }
 }
 /*
+=====================
+Taxsonomies
+=====================
+*/
+.terms {
+  margin: -.25rem;
+}
+
+.terms li {
+  display: inline-block;
+}
+
+.terms a {
+  display: block;
+  float: center;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  color: #333;
+  font-size: 14px;
+  margin: .25rem;
+  padding: 0 .75rem;
+  line-height: 1.75rem;
+}
 
 
+/*
 =====================
 EKKO LIGHTBOX
 =====================

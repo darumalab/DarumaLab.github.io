@@ -7,9 +7,11 @@ draft: false
 image: "blog/img/markdown.png"
 weight: 0
 type: "post"
-description: "test"
+description: "constantldasday checking"
+tags: ["r-markdown","regression","plot","logistic"]
 ---
 
+dasdadada
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 
