@@ -15,6 +15,19 @@
     </ul>
     {{ partial "social_buttons_in_sidebar.html" . }}
 
+
+    {{ range $key, $value := .Site.Taxonomies }}
+    <section class="sidebar">
+      <header>{{ $key | humanize }}</header>
+      <div>
+        <ul class="terms">
+          {{ range first 10 $value.ByCount }}<li><a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>{{ end }}
+        </ul>
+      </div>
+    </section>
+    {{ end }}
+</br>
+
     <div class="copyright">
       <p class="credit">
         {{ with .Site.Params.copyright }}
