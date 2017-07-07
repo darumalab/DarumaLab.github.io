@@ -108,12 +108,12 @@
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/blog/logarithmic_scale/</guid>
-      <description>初めに This is a post written in RMarkdown (*.Rmd) to understand reasons to use logarithmic scales in charts.
+      <description>This is a post written in RMarkdown (*.Rmd) to understand reasons to use logarithmic scales in charts.
 この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins1さん、Gregory Kanevsky2さん、Hunkar Ozyasar 3さんの記事を参考にしています。
-均等目盛と対数目盛りの違い：
+キーポイント 線形目盛と対数目盛りの違い：
  線形目盛（Linear Scale） : 等間隔の幅が一定の量の変化を表している。 対数目盛（Logarithmic Scale） : 等間隔の幅が量の変化率を表している。  対数目盛（Logarithmic Scale）を使うケース4：
-データが狭い範囲に密集していない時に使う。極端な外れ値があるデータ、広い範囲の値を持をロングテール型のデータをきれいに可視化できる。 対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。   線形目盛 山里のほこらに住むリスはその日収穫した10粒の大麦を銀行に預けることにした。貯蓄した大麦には複利の利子がつく。大麦の数は毎年0.5倍ずつ増えていく。
-# 指数関数的成長: 10年後の大麦の数はいくつだろう。 time &amp;lt;- 1:10 # the time period, r &amp;lt;- 0.5 # the growth rate. a &amp;lt;- 10 # the initial amount y &amp;lt;- a * (1 + r)^time # (1+r) is the growth factor # create an index vector with seq_along plt &amp;lt;- qplot(seq_along(y), y, xlab = &amp;quot;年数&amp;quot;, ylab = &amp;quot;大麦の数&amp;quot;) plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(breaks = seq(0, 10, by = 1)) チャート1:大麦の数と貯蓄年数</description>
+データが狭い範囲に密集していない時に使う。極端な外れ値があるデータ、広い範囲の値を持をロングテール型のデータをきれいに可視化できる。 対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。    線形目盛 山里のほこらに住むリスはその日収穫した10粒の大麦を銀行に預けることにした。貯蓄した大麦には複利の利子がつく。大麦の数は毎年0.5倍ずつ増えていく。
+time &amp;lt;- 1:10 # the time period, r &amp;lt;- 0.5 # the growth rate. a &amp;lt;- 10 # the initial amount y &amp;lt;- a * (1 + r)^time # Exponential growth, where (1+r) is the growth factor plt &amp;lt;- qplot(seq_along(y), y, xlab = &amp;quot;年数&amp;quot;, ylab = &amp;quot;大麦の数&amp;quot;) plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(breaks = seq(0, 10, by = 1)) チャート1:大麦の数と貯蓄年数</description>
     </item>
     
     <item>

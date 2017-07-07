@@ -3,7 +3,7 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>線形目盛と対数目盛 - Linear Scale and Logarithmic Scale</title>
-<meta name="description" content="統計学に役立つ情報を提供するニュースサイト">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
@@ -25,6 +25,13 @@
     <![endif]-->
   
 
+
+
+<link rel="stylesheet" href="https://darumalab.github.io/css/highlight.css">
+<script src="https://darumalab.github.io/js/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
 
 <link href="https://darumalab.github.io/css/custom.css" rel="stylesheet">
 <link rel="shortcut icon" href="https://darumalab.github.io/img/icon/topicon.png">
@@ -141,11 +148,11 @@ ga('send', 'pageview');
          <link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<div class="section level1">
-<h1>初めに</h1>
 <p>This is a post written in RMarkdown (<code>*.Rmd</code>) to understand reasons to use logarithmic scales in charts.</p>
 <p>この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>さん、Gregory Kanevsky<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>さん、Hunkar Ozyasar <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>さんの記事を参考にしています。</p>
-<p>均等目盛と対数目盛りの違い：</p>
+<div class="section level3">
+<h3>キーポイント</h3>
+<p>線形目盛と対数目盛りの違い：</p>
 <ul>
 <li><a href="#linear">線形目盛（Linear Scale）</a> : 等間隔の幅が一定の量の変化を表している。</li>
 <li><a href="#log">対数目盛（Logarithmic Scale）</a> : 等間隔の幅が量の変化率を表している。</li>
@@ -156,15 +163,14 @@ ga('send', 'pageview');
 <li>対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。</li>
 </ol>
 <p> </p>
+</div>
 <div id="linear" class="section level3">
 <h3>線形目盛</h3>
 <p>山里のほこらに住むリスはその日収穫した10粒の大麦を銀行に預けることにした。貯蓄した大麦には複利の利子がつく。大麦の数は毎年0.5倍ずつ増えていく。</p>
-<pre class="r"><code># 指数関数的成長: 10年後の大麦の数はいくつだろう。
-time &lt;- 1:10  # the time period,
+<pre class="r"><code>time &lt;- 1:10  # the time period,
 r &lt;- 0.5  # the growth rate.
 a &lt;- 10  # the initial amount
-y &lt;- a * (1 + r)^time  # (1+r) is the growth factor
-# create an index vector with seq_along
+y &lt;- a * (1 + r)^time  # Exponential growth, where (1+r) is the growth factor
 plt &lt;- qplot(seq_along(y), y, xlab = &quot;年数&quot;, ylab = &quot;大麦の数&quot;)
 plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(breaks = seq(0, 
     10, by = 1))</code></pre>
@@ -173,7 +179,7 @@ plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(b
 <p> </p>
 <p>１０年後、大麦の数は指数関数的に増加して行きリスは大金持ちになっていた。</p>
 <p>チャート1は、大麦の数と貯蓄年数の関係を線形目盛で可視化している。垂直軸であるY軸上の等間隔の幅が一定の量の変化を示している。1cmの幅が大麦100粒の増加を表している場合、200粒から300粒への増加も1cmの幅がある。</p>
-<p>リスは銀行に渡された線形目盛のチャートをながめて幸せそうだ。しかし5年目から10年目の粒の増え方に比べて、1年目から5年目までの大麦の増え方が分かりづらいと思った。リスは銀行に新しいチャートを用意させることにした。「5年目までの大麦の増え方をもっと分かりやすく見せてくれ」</p>
+<p>リスは銀行に渡された線形目盛のチャートをながめて幸せそうだ。しかし5年目から10年目の大麦の増え方に比べて、1年目から5年目までの大麦の増え方が分かりづらいと思った。リスは銀行に新しいチャートを用意させることにした。「5年目までの大麦の増え方をもっと分かりやすく見せてくれ」</p>
 <p> </p>
 </div>
 <div id="log" class="section level3">
@@ -181,15 +187,15 @@ plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(b
 <pre class="r"><code>plt &lt;- qplot(seq_along(y), log(y), xlab = &quot;年数&quot;, ylab = &quot;log(大麦の数)&quot;)
 plt + scale_y_continuous(breaks = seq(1, 6.5, by = 0.5)) + scale_x_continuous(breaks = seq(0, 
     10, by = 1))</code></pre>
-<p><img src="/blog/logarithmic_scale_files/figure-html/unnamed-chunk-4-1.png" width="95%" /> <em>チャート2:大麦の数と貯蓄年数</em></p>
+<p><img src="/blog/logarithmic_scale_files/figure-html/unnamed-chunk-4-1.png" width="95%" /></p>
+<p><em>チャート2:大麦の数と貯蓄年数</em></p>
 <p> </p>
 <p>銀行はリスの要望を受けて新しいチャートを用意した。</p>
 <p>チャート2は、大麦の数と貯蓄年数の関係を対数目盛で可視化している。垂直軸であるY軸上の等間隔の幅が量の変化率を示している。1cmの幅が大麦の粒の50%の増加を表している場合、同軸上の異なる位置でも1cmの幅は50%の増加を示している。</p>
-<p>大麦は毎年同じ増加率を達成していた。リスは銀行に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているグラフを片対数(semi-log)チャートと呼ぶ。<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>片対数チャートを見ると増加傾向は毎年50%を保っていることが分かる。</p>
-<p>1年目から5年目まではわずかな増加だった大麦の数量は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、1年目から5年目までの情報がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。</p>
+<p>大麦は毎年同じ増加率を達成していた。リスは銀行に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているグラフを片対数(semi-log)チャートと呼ぶ。<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>片対数チャートを見ると増加傾向は毎年同じ比率を保っていることが分かる。</p>
+<p>1年目から5年目まではわずかな増加だった大麦の数量は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、チャート1では1年目から5年目までの情報がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。</p>
 <p> </p>
 <p> </p>
-</div>
 </div>
 <div class="footnotes">
 <hr />
