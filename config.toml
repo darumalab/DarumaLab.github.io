@@ -12,7 +12,7 @@ googleAnalytics = "UA-101594477-1"
   # Style options: default (pink), blue, green, pink, red, sea, violet
   # Use custom.css for your custom styling
   style = ""
-  description = "統計学に役立つ情報を提供するニュースサイト"
+  description = ""
   copyright = "&copy;2016 Daruma Lab"
   sidebarAbout = [
     ""

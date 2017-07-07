@@ -1,9 +1,9 @@
 ---
-date: "2017-05-02"
-title: "線形目盛と対数目盛 - Linear Scale and Logarithmic Scale"
 output:
   html_document:
-    highlight: kate
+    code_folding: "hide"
+date: "2017-05-02"
+title: "線形目盛と対数目盛 - Linear Scale and Logarithmic Scale"
 author: "Joe Saito"
 showonlyimage: true
 draft: false
@@ -15,7 +15,6 @@ categories: ["R","data visualization"]
 tags: ["plot","log","linear"]
 ---
 
- 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 
@@ -31,20 +30,18 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 ```{r, include = FALSE}
 library(highr)
+library(rmarkdown)
 library(ggplot2)
 old = theme_set(theme_gray(base_family = "HiraKakuProN-W3"))
 ```
-
-
-
-# 初めに
-
 
 This is a post written in RMarkdown (`*.Rmd`) to understand reasons to use logarithmic scales in charts. 
 
 この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins^[[Naomi Robbins: When Should I Use Logarithmic Scales in My Charts and Graphs?](https://www.forbes.com/sites/naomirobbins/2012/01/19/when-should-i-use-logarithmic-scales-in-my-charts-and-graphs/3/#4f5ca766d184)]さん、Gregory Kanevsky^[[Gregory Kanevsky: Logarithmic Scale Explained with U.S. Trade Balance](http://novyden.blogspot.jp/2017/06/logarithmic-scale-explained-with-us.html)]さん、Hunkar Ozyasar ^[[Hunkar Ozyasar : Why Use a Logarithmic Scale to View Stocks?](http://finance.zacks.com/use-logarithmic-scale-stocks-8760.html)]さんの記事を参考にしています。
 
-均等目盛と対数目盛りの違い：
+### キーポイント
+
+線形目盛と対数目盛りの違い：
 
 - [線形目盛（Linear Scale）](#linear) : 等間隔の幅が一定の量の変化を表している。
 - [対数目盛（Logarithmic Scale）](#log) : 等間隔の幅が量の変化率を表している。
@@ -61,15 +58,12 @@ This is a post written in RMarkdown (`*.Rmd`) to understand reasons to use logar
 山里のほこらに住むリスはその日収穫した10粒の大麦を銀行に預けることにした。貯蓄した大麦には複利の利子がつく。大麦の数は毎年0.5倍ずつ増えていく。
 
 ```{r}
-# 指数関数的成長: 10年後の大麦の数はいくつだろう。
 time <- 1:10 # the time period,
 r <- 0.5 # the growth rate.
 a <- 10 # the initial amount
-y <- a * (1 + r) ^ time # (1+r) is the growth factor
-# create an index vector with seq_along
+y <- a * (1 + r) ^ time # Exponential growth, where (1+r) is the growth factor
 plt <- qplot(seq_along(y), y, xlab = "年数", ylab = "大麦の数")
-plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) +
-scale_x_continuous(breaks = seq(0, 10, by = 1))
+plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(breaks = seq(0, 10, by = 1))
 ```
 
 *チャート1:大麦の数と貯蓄年数*
@@ -80,7 +74,7 @@ scale_x_continuous(breaks = seq(0, 10, by = 1))
 
 チャート1は、大麦の数と貯蓄年数の関係を線形目盛で可視化している。垂直軸であるY軸上の等間隔の幅が一定の量の変化を示している。1cmの幅が大麦100粒の増加を表している場合、200粒から300粒への増加も1cmの幅がある。
 
-リスは銀行に渡された線形目盛のチャートをながめて幸せそうだ。しかし5年目から10年目の粒の増え方に比べて、1年目から5年目までの大麦の増え方が分かりづらいと思った。リスは銀行に新しいチャートを用意させることにした。「5年目までの大麦の増え方をもっと分かりやすく見せてくれ」
+リスは銀行に渡された線形目盛のチャートをながめて幸せそうだ。しかし5年目から10年目の大麦の増え方に比べて、1年目から5年目までの大麦の増え方が分かりづらいと思った。リスは銀行に新しいチャートを用意させることにした。「5年目までの大麦の増え方をもっと分かりやすく見せてくれ」
 
 &nbsp;
 
@@ -88,9 +82,9 @@ scale_x_continuous(breaks = seq(0, 10, by = 1))
 
 ```{r}
 plt <- qplot(seq_along(y), log(y), xlab = "年数", ylab = "log(大麦の数)")
-plt + scale_y_continuous(breaks = seq(1, 6.5, by = 0.5)) +
-  scale_x_continuous(breaks = seq(0, 10, by = 1))
+plt + scale_y_continuous(breaks = seq(1, 6.5, by = 0.5)) + scale_x_continuous(breaks = seq(0, 10, by = 1))
 ```
+
 *チャート2:大麦の数と貯蓄年数*
 
 &nbsp;
@@ -99,9 +93,9 @@ plt + scale_y_continuous(breaks = seq(1, 6.5, by = 0.5)) +
 
 チャート2は、大麦の数と貯蓄年数の関係を対数目盛で可視化している。垂直軸であるY軸上の等間隔の幅が量の変化率を示している。1cmの幅が大麦の粒の50%の増加を表している場合、同軸上の異なる位置でも1cmの幅は50%の増加を示している。
 
-大麦は毎年同じ増加率を達成していた。リスは銀行に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているグラフを片対数(semi-log)チャートと呼ぶ。^[[片対数グラフ](https://ja.wikipedia.org/wiki/%E7%89%87%E5%AF%BE%E6%95%B0%E3%82%B0%E3%83%A9%E3%83%95)]片対数チャートを見ると増加傾向は毎年50%を保っていることが分かる。
+大麦は毎年同じ増加率を達成していた。リスは銀行に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているグラフを片対数(semi-log)チャートと呼ぶ。^[[片対数グラフ](https://ja.wikipedia.org/wiki/%E7%89%87%E5%AF%BE%E6%95%B0%E3%82%B0%E3%83%A9%E3%83%95)]片対数チャートを見ると増加傾向は毎年同じ比率を保っていることが分かる。
 
-1年目から5年目まではわずかな増加だった大麦の数量は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、1年目から5年目までの情報がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。
+1年目から5年目まではわずかな増加だった大麦の数量は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、チャート1では1年目から5年目までの情報がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。
 
 
 
