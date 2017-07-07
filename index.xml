@@ -103,26 +103,17 @@
     </item>
     
     <item>
-      <title>A Plain Markdown Post</title>
-      <link>https://darumalab.github.io/blog/first_attempt/</link>
+      <title>線形目盛と対数目盛 - Linear Scale and Logarithmic Scale</title>
+      <link>https://darumalab.github.io/blog/logarithmic_scale/</link>
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://darumalab.github.io/blog/first_attempt/</guid>
-      <description>dasdadada
-Introduction This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
-You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.  There are many differences in syntax between Blackfriday’s Markdown and Pandoc’s Markdown.</description>
-    </item>
-    
-    <item>
-      <title>A Plain Markdown Post2</title>
-      <link>https://darumalab.github.io/blog/second_attempt/</link>
-      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://darumalab.github.io/blog/second_attempt/</guid>
-      <description>test This is an R Markdown Notebook. When you execute code within the notebook, the results appear beneath the code.
-Try executing this chunk by clicking the Run button within the chunk or by placing your cursor inside it and pressing Cmd+Shift+Enter.
-plot(cars) Add a new chunk by clicking the Insert Chunk button on the toolbar or by pressing Cmd+Option+I.
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the Preview button or press Cmd+Shift+K to preview the HTML file).</description>
+      <guid>https://darumalab.github.io/blog/logarithmic_scale/</guid>
+      <description>初めに This is a post written in RMarkdown (*.Rmd) to understand reasons to use logarithmic scales in charts.
+この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins1さん、Gregory Kanevsky2さん、Hunkar Ozyasar 3さんの記事を参考にしています。
+均等目盛と対数目盛りの違い：
+ 線形目盛（Linear Scale） : 等間隔の幅が一定の量の変化を表している。 対数目盛（Logarithmic Scale） : 等間隔の幅が量の変化率を表している。  対数目盛（Logarithmic Scale）を使うケース4：
+データが狭い範囲に密集していない時に使う。極端な外れ値があるデータ、広い範囲の値を持をロングテール型のデータをきれいに可視化できる。 対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。   線形目盛 山里のほこらに住むリスはその日収穫した10粒の大麦を銀行に預けることにした。貯蓄した大麦には複利の利子がつく。大麦の数は毎年0.5倍ずつ増えていく。
+# 指数関数的成長: 10年後の大麦の数はいくつだろう。 time &amp;lt;- 1:10 # the time period, r &amp;lt;- 0.5 # the growth rate. a &amp;lt;- 10 # the initial amount y &amp;lt;- a * (1 + r)^time # (1+r) is the growth factor # create an index vector with seq_along plt &amp;lt;- qplot(seq_along(y), y, xlab = &amp;quot;年数&amp;quot;, ylab = &amp;quot;大麦の数&amp;quot;) plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(breaks = seq(0, 10, by = 1)) チャート1:大麦の数と貯蓄年数</description>
     </item>
     
     <item>
@@ -142,17 +133,6 @@ When you save the notebook, an HTML file containing the code and output will be 
       
       <guid>https://darumalab.github.io/about/</guid>
       <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>https://darumalab.github.io/blog/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://darumalab.github.io/blog/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
   </channel>

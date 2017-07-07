@@ -48,12 +48,7 @@
   </url>
   
   <url>
-    <loc>https://darumalab.github.io/blog/first_attempt/</loc>
-    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://darumalab.github.io/blog/second_attempt/</loc>
+    <loc>https://darumalab.github.io/blog/logarithmic_scale/</loc>
     <lastmod>2017-05-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,11 +73,6 @@
   </url>
   
   <url>
-    <loc>https://darumalab.github.io/blog/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://darumalab.github.io/</loc>
     <lastmod>2016-11-05T19:44:32+05:30</lastmod>
     <priority>0</priority>
@@ -100,7 +90,19 @@
   </url>
   
   <url>
-    <loc>https://darumalab.github.io/tags/logistic/</loc>
+    <loc>https://darumalab.github.io/categories/data-visualization/</loc>
+    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darumalab.github.io/tags/linear/</loc>
+    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darumalab.github.io/tags/log/</loc>
     <lastmod>2017-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -119,18 +121,6 @@
   
   <url>
     <loc>https://darumalab.github.io/categories/r/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darumalab.github.io/tags/r-markdown/</loc>
-    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darumalab.github.io/tags/regression/</loc>
     <lastmod>2017-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
