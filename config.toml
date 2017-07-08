@@ -7,12 +7,11 @@ disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-101594477-1"
 
-
 [params]
   # Style options: default (pink), blue, green, pink, red, sea, violet
   # Use custom.css for your custom styling
   style = ""
-  description = ""
+  description = "R言語と統計学"
   copyright = "&copy;2016 Daruma Lab"
   sidebarAbout = [
     ""
