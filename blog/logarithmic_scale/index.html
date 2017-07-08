@@ -3,10 +3,24 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>線形目盛と対数目盛 - Linear Scale and Logarithmic Scale</title>
-
+<meta property="og:site_name" content="Baker Street" />
+<meta property="og:title" content="線形目盛と対数目盛 - Linear Scale and Logarithmic Scale" />
+<meta property="og:url" content="https://darumalab.github.io/blog/logarithmic_scale/" />
+<meta property="og:type" content="article" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
+<meta property="og:locale" content="ja">
+<meta property="og:description" content="This is a post written in RMarkdown (*.Rmd) to understand reasons to use logarithmic scales in charts.
+この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins1さん、Gregory Kanevsky2さん、Hunkar Ozyasar 3さんの記事を参考にしています。
+キーポイント 線形目盛と対数目盛りの違い：
+ 線形目盛（Linear Scale） : 等間隔の幅が一定の量の変化を表している。 対数目盛（Logarithmic Scale） : 等間隔の幅が量の変化率を表している。  対数目盛（Logarithmic Scale）を使うケース4：
+データが狭い範囲に密集していない時に使う。極端な外れ値があるデータ、広い範囲の値を持をロングテール型のデータをきれいに可視化できる。 対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。   1885年の秋のある日、アーサー・コナン・ドイルは株式仲買店員の友人に稼ぎの一部を預けることにした。大学卒業後、開業した診療所の仕事がやっと軌道に乗りはじめていた。経済的に困っていたわけではなく、資金繰りが苦しい友人を助けるつもりだった。預けたソブリン金貨には複利の利子がつく。「金貨は必ず毎年0.5倍ずつ増えていく」
+ 線形目盛 time &lt;- 1:10 # 貯蓄期間 r &lt;- 0.5 # 成長率 a &lt;- 10 # 預けた金貨 y &lt;- a * (1 &#43; r)^time # 指数関数的な成長, (1&#43;r) is the growth factor plt &lt;- qplot(seq_along(y), y, xlab = &quot;年数&quot;, ylab = &quot;金貨&quot;) plt &#43; scale_y_continuous(breaks = seq(0, 1000, by = 100)) &#43; scale_x_continuous(breaks = seq(0, 10, by = 1)) チャート1:金貨と預入期間" />
+
+<meta property="og:updated_time" content="2017-05-02 00:00:00 &#43;0000 UTC"/>
+
+
 <link rel="stylesheet" href="https://darumalab.github.io/css/bootstrap.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
 <link rel="stylesheet" href="https://darumalab.github.io/css/font-awesome.min.css">
@@ -24,7 +38,6 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   
-
 
 
 <link rel="stylesheet" href="https://darumalab.github.io/css/highlight.css">
