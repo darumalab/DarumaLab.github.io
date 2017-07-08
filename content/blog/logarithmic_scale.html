@@ -33,39 +33,38 @@ tags: ["plot","log","linear"]
 <li>対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。</li>
 </ol>
 <p> </p>
+<p>1885年の秋のある日、アーサー・コナン・ドイルは株式仲買店員の友人に稼ぎの一部を預けることにした。大学卒業後、開業した診療所の仕事がやっと軌道に乗りはじめていた。経済的に困っていたわけではなく、資金繰りが苦しい友人を助けるつもりだった。預けたソブリン金貨には複利の利子がつく。「金貨は必ず毎年0.5倍ずつ増えていく」</p>
 </div>
 <div id="linear" class="section level3">
 <h3>線形目盛</h3>
-<p>山里のほこらに住むリスはその日収穫した10粒の大麦を銀行に預けることにした。貯蓄した大麦には複利の利子がつく。大麦の数は毎年0.5倍ずつ増えていく。</p>
-<pre class="r"><code>time &lt;- 1:10  # the time period,
-r &lt;- 0.5  # the growth rate.
-a &lt;- 10  # the initial amount
-y &lt;- a * (1 + r)^time  # Exponential growth, where (1+r) is the growth factor
-plt &lt;- qplot(seq_along(y), y, xlab = &quot;年数&quot;, ylab = &quot;大麦の数&quot;)
+<pre class="r"><code>time &lt;- 1:10  # 貯蓄期間
+r &lt;- 0.5  # 成長率
+a &lt;- 10  # 預けた金貨
+y &lt;- a * (1 + r)^time  # 指数関数的な成長, (1+r) is the growth factor
+plt &lt;- qplot(seq_along(y), y, xlab = &quot;年数&quot;, ylab = &quot;金貨&quot;)
 plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(breaks = seq(0, 
     10, by = 1))</code></pre>
 <p><img src="/blog/logarithmic_scale_files/figure-html/unnamed-chunk-3-1.png" width="95%" /></p>
-<p><em>チャート1:大麦の数と貯蓄年数</em></p>
+<p><em>チャート1:金貨と預入期間</em></p>
 <p> </p>
-<p>１０年後、大麦の数は指数関数的に増加して行きリスは大金持ちになっていた。</p>
-<p>チャート1は、大麦の数と貯蓄年数の関係を線形目盛で可視化している。垂直軸であるY軸上の等間隔の幅が一定の量の変化を示している。1cmの幅が大麦100粒の増加を表している場合、200粒から300粒への増加も1cmの幅がある。</p>
-<p>リスは銀行に渡された線形目盛のチャートをながめて幸せそうだ。しかし5年目から10年目の大麦の増え方に比べて、1年目から5年目までの大麦の増え方が分かりづらいと思った。リスは銀行に新しいチャートを用意させることにした。「5年目までの大麦の増え方をもっと分かりやすく見せてくれ」</p>
+<p>10年が経ち、友人が約束した通り預けた金貨は増えていった。</p>
+<p>チャート1は、金貨と預入期間の関係を線形目盛で可視化している。垂直軸であるY軸上の等間隔の幅が一定の量の変化を示している。1cmの幅が金貨100枚の増加を表している場合、200枚から300枚への増加も1cmの幅がある。</p>
+<p>アーサーは友人に渡された線形目盛のチャートをながめながら、5年目から10年目の金貨の増え方に比べて、1年目から5年目までの金貨の増え方が分かりづらいと思った。アーサーは友人に新しいチャートを用意させることにした。「5年目までの金貨の増え方をもっと分かりやすく見せてくれ」</p>
 <p> </p>
 </div>
 <div id="log" class="section level3">
 <h3>対数目盛</h3>
-<pre class="r"><code>plt &lt;- qplot(seq_along(y), log(y), xlab = &quot;年数&quot;, ylab = &quot;log(大麦の数)&quot;)
-plt + scale_y_continuous(breaks = seq(1, 6.5, by = 0.5)) + scale_x_continuous(breaks = seq(0, 
-    10, by = 1))</code></pre>
+<pre class="r"><code>plt &lt;- qplot(seq_along(y), log(y), xlab = &quot;年数&quot;, ylab = &quot;log(金貨)&quot;)
+plt + scale_x_continuous(breaks = seq(0, 10, by = 1))</code></pre>
 <p><img src="/blog/logarithmic_scale_files/figure-html/unnamed-chunk-4-1.png" width="95%" /></p>
-<p><em>チャート2:大麦の数と貯蓄年数</em></p>
+<p><em>チャート2:金貨と預入期間</em></p>
 <p> </p>
-<p>銀行はリスの要望を受けて新しいチャートを用意した。</p>
-<p>チャート2は、大麦の数と貯蓄年数の関係を対数目盛で可視化している。垂直軸であるY軸上の等間隔の幅が量の変化率を示している。1cmの幅が大麦の粒の50%の増加を表している場合、同軸上の異なる位置でも1cmの幅は50%の増加を示している。</p>
-<p>大麦は毎年同じ増加率を達成していた。リスは銀行に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているグラフを片対数(semi-log)チャートと呼ぶ。<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>片対数チャートを見ると増加傾向は毎年同じ比率を保っていることが分かる。</p>
-<p>1年目から5年目まではわずかな増加だった大麦の数量は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、チャート1では1年目から5年目までの情報がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。</p>
+<p>友人はアーサーの要望を受けて新しいチャートを用意した。</p>
+<p>チャート2は、金貨と預入期間の関係を対数目盛で可視化している。垂直軸であるY軸上の等間隔の幅が量の変化率を示している。1cmの幅が金貨の50%の増加を表している場合、同軸上の異なる位置でも1cmの幅は50%の増加を示している。</p>
+<p>金貨は毎年同じ増加率を達成していた。アーサーは友人に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているチャートを<strong>片対数(semi-log)チャート</strong>と呼ぶ。<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>片対数チャートを見ると増加傾向は毎年同じ比率を保っていることが分かった。</p>
+<p>1年目から5年目まではわずかな増加だった金貨は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、チャート1では1年目から5年目までの変化がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。</p>
 <p> </p>
-<p> </p>
+<p>Date: “09 July, 2017”</p>
 </div>
 <div class="footnotes">
 <hr />
@@ -74,6 +73,6 @@ plt + scale_y_continuous(breaks = seq(1, 6.5, by = 0.5)) + scale_x_continuous(br
 <li id="fn2"><p><a href="http://novyden.blogspot.jp/2017/06/logarithmic-scale-explained-with-us.html">Gregory Kanevsky: Logarithmic Scale Explained with U.S. Trade Balance</a><a href="#fnref2">↩</a></p></li>
 <li id="fn3"><p><a href="http://finance.zacks.com/use-logarithmic-scale-stocks-8760.html">Hunkar Ozyasar : Why Use a Logarithmic Scale to View Stocks?</a><a href="#fnref3">↩</a></p></li>
 <li id="fn4"><p><a href="https://en.wikipedia.org/wiki/Logarithmic_scale#Graphic_representation">Logarithmic scale: Graphic representation</a><a href="#fnref4">↩</a></p></li>
-<li id="fn5"><p><a href="https://en.wikipedia.org/wiki/Semi-log_plot">片対数グラフ</a><a href="#fnref5">↩</a></p></li>
+<li id="fn5"><p><a href="https://en.wikipedia.org/wiki/Semi-log_plot">Semi-log plot</a><a href="#fnref5">↩</a></p></li>
 </ol>
 </div>
