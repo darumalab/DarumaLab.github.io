@@ -1,5 +1,5 @@
 baseurl = "https://darumalab.github.io/"
-title = "Baker Street"
+title = "ベイカー・ストリート"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "ja"
 # Enable comments by entering your Disqus shortname
@@ -12,7 +12,7 @@ googleAnalytics = "UA-101594477-1"
   # Use custom.css for your custom styling
   style = ""
   description = "R言語と統計学"
-  copyright = "&copy;2016 Daruma Lab"
+  copyright = "&copy;2016 Joe Saito"
   sidebarAbout = [
     ""
   ]
