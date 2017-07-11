@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Baker Street</title>
+    <title>ベイカー・ストリート</title>
     <link>https://darumalab.github.io/</link>
-    <description>Recent content on Baker Street</description>
+    <description>Recent content on ベイカー・ストリート</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy;2016 Daruma Lab</copyright>
+    <copyright>&amp;copy;2016 Joe Saito</copyright>
     <lastBuildDate>Sat, 05 Nov 2016 19:44:32 +0530</lastBuildDate>
     
 	<atom:link href="https://darumalab.github.io/index.xml" rel="self" type="application/rss+xml" />
