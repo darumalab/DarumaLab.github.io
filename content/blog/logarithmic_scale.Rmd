@@ -16,8 +16,6 @@ tags: ["チャート","対数","線形","charts","log","linear"]
 ---
 
 ```{r setup, include=FALSE}
-# new_content(paste0("blog/test-", Sys.Date(), ".Rmd"))
-# tags: ["チャート-charts","対数-log","線形-linear"]
 knitr::opts_chunk$set(echo = TRUE, 
                       tidy.opts = list(width.cutoff = 60),
                       tidy = TRUE, 
@@ -51,9 +49,9 @@ This is a post written in RMarkdown (`*.Rmd`) to understand reasons to use logar
 
 1. データが狭い範囲に密集していない時に使う。極端な外れ値があるデータ、広い範囲の値を持をロングテール型のデータをきれいに可視化できる。
 2. 対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。
-
 &nbsp;
 
+### アーサー・ドイルと金貨のチャート
 1885年の秋のある日、アーサー・コナン・ドイルは株式仲買店員の友人に稼ぎの一部を預けることにした。大学卒業後、開業した診療所の仕事がやっと軌道に乗りはじめていた。経済的に困っていたわけではなく、資金繰りが苦しい友人を助けるつもりだった。預けたソブリン金貨には複利の利子がつく。「金貨は必ず毎年0.5倍ずつ増えていく」
 
 ### 線形目盛 {#linear}
