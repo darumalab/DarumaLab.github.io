@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>データ可視化 Data Viz</title>
+<meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
+<meta property="og:site_name" content="ベイカー・ストリート" />
+<meta property="og:title" content="データ可視化 Data Viz" />
+<meta property="og:url" content="/categories/%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%AF%E8%A6%96%E5%8C%96-data-viz/" />
+<meta property="og:type" content="article" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<meta property="og:locale" content="ja">
+<meta property="og:description" content="R言語と統計学" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.theme.css">
+
+
+  
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+<link rel="stylesheet" href="/css/highlight.css">
+<script src="/js/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+<link href="/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/icon/topicon.jpg">
+
+  <link href="/categories/%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%AF%E8%A6%96%E5%8C%96-data-viz/index.xml" rel="alternate" type="application/rss+xml" title="ベイカー・ストリート" />
+  <link href="/categories/%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%AF%E8%A6%96%E5%8C%96-data-viz/index.xml" rel="feed" type="application/rss+xml" title="ベイカー・ストリート" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-101594477-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="/"><B>ベイカー・ストリート</B></a></h1>
+
+    <a href="/"><img style="max-width: 150px; height: auto;" src="/img/icon/top_icon_bigger.jpg"/></a>
+
+    
+      <p class="sidebar-p"></p>
+    
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="/">Home</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/yodaruma" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  <a href="mailto:datadaruma@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/darumalab" data-animate-hover="pulse">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://www.youtube.com/channel/UC7aVZqDYKM2fJAGioTiJCxQ" data-animate-hover="pulse">
+    <i class="fa fa-youtube"></i>
+  </a>
+  
+  
+  <a href="https://darumalab.github.io/index.xml" data-animate-hover="pulse">
+    <i class="fa fa-rss"></i>
+  </a>
+  
+</p>
+
+
+
+    
+    <section class="sidebar">
+      <header>Categories</header>
+      <div>
+        <ul class="terms">
+          <li><a href="/categories/r%E8%A8%80%E8%AA%9E-r">r言語-r</a></li><li><a href="/categories/%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%AF%E8%A6%96%E5%8C%96-data-viz">データ可視化-data-viz</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="sidebar">
+      <header>Tags</header>
+      <div>
+        <ul class="terms">
+          <li><a href="/tags/"></a></li><li><a href="/tags/charts">charts</a></li><li><a href="/tags/linear">linear</a></li><li><a href="/tags/log">log</a></li><li><a href="/tags/%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88">チャート</a></li><li><a href="/tags/%E5%AF%BE%E6%95%B0">対数</a></li><li><a href="/tags/%E7%B7%9A%E5%BD%A2">線形</a></li>
+        </ul>
+      </div>
+    </section>
+    
+</br>
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2016 Joe Saito
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a> | Illustration by <a href="https://twitter.com/circulo__">nomada</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="/">ベイカー・ストリート</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content" id="blog-listing-medium">
+         <h1>データ可視化 Data Viz</h1> </br> 
+
+         
+
+
+         
+
+
+          
+          
+          <section class="post">
+              <div class="row">
+                  <div class="col-md-4">
+                    <div class="image">
+                        <a href="/blog/sieve_of_eratosthenes/">
+                            
+                            <img src="/blog/img/erastothenes.png" class="img-responsive" alt="">
+                            
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                      <h2><a href="/blog/sieve_of_eratosthenes/">エラトステネスの篩を可視化する - Visualizing the Sieve of Eratosthenesー</a></h2>
+                      <div class="clearfix">
+                          <p class="author-category">
+                            
+                            By <a href="../about/">Joe Saito</a>
+                            
+                            
+                            
+                            in <a href="/categories/r%e8%a8%80%e8%aa%9e-r">R言語 R</a>
+                            
+                            
+
+                          </p>
+                          <p class="date-comments">
+                              <a href="/blog/sieve_of_eratosthenes/"><i class="fa fa-calendar-o"></i> May 2, 2017</a>
+                          </p>
+                      </div>
+                      <p class="intro">
+                       
+                          チャートを作る：線形目盛と対数目盛を使い分ける。
+                       </p>
+
+
+
+                      <p class="read-more"><a id="amber-btn" href="/blog/sieve_of_eratosthenes/" class="btn btn-template-main">Continue reading</a>
+                      </p>
+                  </div>
+              </div>
+          </section>
+          
+
+          <ul class="pager">
+              
+              <li class="previous disabled"><a href="#">&larr; Newer</a></li>
+              
+
+              
+              <li class="next disabled"><a href="#">Older &rarr;</a></li>
+              
+          </ul>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js"> </script>
+<script src="/js/ekko-lightbox.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/front.js"></script>
+
+</body>
+</html>

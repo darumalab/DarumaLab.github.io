@@ -225,6 +225,17 @@ Taxsonomies
 
 /*
 =====================
+Videos
+=====================
+*/
+.center_iframe{
+  display: block;
+  margin: auto;
+}
+
+
+/*
+=====================
 EKKO LIGHTBOX
 =====================
 */

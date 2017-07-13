@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prime on ベイカー・ストリート</title>
+    <link>/tags/prime/</link>
+    <description>Recent content in Prime on ベイカー・ストリート</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;2016 Joe Saito</copyright>
+    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/prime/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>エラトステネスの篩を可視化する - Visualizing the Sieve of Eratosthenesー</title>
+      <link>/blog/sieve_of_eratosthenes/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/sieve_of_eratosthenes/</guid>
+      <description>This is a post written in RMarkdown (*.Rmd) to understand reasons to use logarithmic scales in charts.
+この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins1さん、The Sieve of Eratosthenes in R2を参考にしています。
+head(mtcars, n = 5) ## mpg cyl disp hp drat wt qsec vs am gear carb ## Mazda RX4 21.0 6 160 110 3.90 2.620 16.46 0 1 4 4 ## Mazda RX4 Wag 21.0 6 160 110 3.90 2.875 17.02 0 1 4 4 ## Datsun 710 22.</description>
+    </item>
+    
+  </channel>
+</rss>

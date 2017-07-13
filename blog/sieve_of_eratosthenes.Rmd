@@ -1,0 +1,76 @@
+---
+date: "2017-05-02"
+title: "エラトステネスの篩 - the Sieve of Eratosthenes"
+author: "Joe Saito"
+showonlyimage: true
+draft: false
+image: "blog/img/erastothenes.png"
+weight: 0
+type: "post"
+description: "チャートを作る：線形目盛と対数目盛を使い分ける。"
+categories: ["R言語"]
+tags: [""]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy.opts = list(width.cutoff = 60),
+                      tidy = TRUE, 
+                      out.width = '95%')
+```
+
+```{r, include = FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+```{r, include = FALSE}
+library(knitr)
+library(rmarkdown)
+library(ggplot2)
+old = theme_set(theme_gray(base_family = "HiraKakuProN-W3"))
+```
+
+This is a post written in RMarkdown (`*.Rmd`) to visualize the Sieve of Eratosthenes. 
+
+この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins^[[David N. Cox: Visualizing the Sieve of Eratosthenes](http://www.ams.org/notices/200805/tx080500579p.pdf)]さん、The Sieve of Eratosthenes in R^[[The Sieve of Eratosthenes in R](https://dfafonso.shinyapps.io/Visualizing-Primes/)]を参考にしています。
+
+
+### キーポイント
+
+素数とは何だろう？:
+
+- 2以上の整数で、1と自分自身の数以外では割ることのできない数
+- 2は一番小さい素数である。素数の数は無限にある。^[[素数が無数に存在することの証明](https://ja.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0%E3%81%8C%E7%84%A1%E6%95%B0%E3%81%AB%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E8%A8%BC%E6%98%8E)]
+
+エラトステネスの篩の手順^[[エラトステネスの篩](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9)]:
+
+1. 2以上の整数を昇順で並べたリストを作る。n:(2,3,4,..,n)  
+2. 初めにpを2とする。（一番小さな素数）  
+3. pからnまで、p以外のpの倍数をリストから篩い落として行く。(2x2, 2x3, 2x4, 2x5,..)
+4. nの平方根になる最初の値を見つけるまで篩い落として行く。
+
+これを1単位ずつ繰り返す。(2p,3p,4p...)  
+
+
+```{r}
+# The Sieve of Eratosthenes
+
+# Given a number greater than zero this function will return a list of primes between 2 and the number given as argument.
+sieveOfEratosthenes <- function(num){
+  values <- rep(TRUE, num)
+	values[1] <- FALSE
+	prev.prime <- 2
+	for(i in prev.prime:sqrt(num)){
+		values[seq.int(2 * prev.prime, num, prev.prime)] <- FALSE
+		prev.prime <- prev.prime + min(which(values[(prev.prime + 1) : num]))
+	}
+	return(which(values))
+}
+
+sieveOfEratosthenes(2000)
+
+length(sieveOfEratosthenes(2000)) # 303
+```
+
+
+

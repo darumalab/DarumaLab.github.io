@@ -11,11 +11,13 @@ image: "blog/img/scale.jpg"
 weight: 0
 type: "post"
 description: "チャートを作る：線形目盛と対数目盛を使い分ける。"
-categories: ["R","data visualization"]
-tags: ["plot","log","linear"]
+categories: ["R言語"]
+tags: ["チャート","対数","線形","charts","log","linear"]
 ---
 
 ```{r setup, include=FALSE}
+# new_content(paste0("blog/test-", Sys.Date(), ".Rmd"))
+# tags: ["チャート-charts","対数-log","線形-linear"]
 knitr::opts_chunk$set(echo = TRUE, 
                       tidy.opts = list(width.cutoff = 60),
                       tidy = TRUE, 

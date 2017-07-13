@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>データ可視化 Data Viz on ベイカー・ストリート</title>
+    <link>/categories/%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%AF%E8%A6%96%E5%8C%96-data-viz/</link>
+    <description>Recent content in データ可視化 Data Viz on ベイカー・ストリート</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;2016 Joe Saito</copyright>
+    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%E3%83%87%E3%83%BC%E3%82%BF%E5%8F%AF%E8%A6%96%E5%8C%96-data-viz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>エラトステネスの篩を可視化する - Visualizing the Sieve of Eratosthenesー</title>
+      <link>/blog/sieve_of_eratosthenes/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/sieve_of_eratosthenes/</guid>
+      <description>This is a post written in RMarkdown (*.Rmd) to understand reasons to use logarithmic scales in charts.
+この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins1さん、The Sieve of Eratosthenes in R2を参考にしています。
+ David N. Cox: Visualizing the Sieve of Eratosthenes↩
+ The Sieve of Eratosthenes in R↩
+   </description>
+    </item>
+    
+  </channel>
+</rss>
