@@ -1,0 +1,60 @@
+---
+date: "2017-07-13"
+title: "R言語 オブジェクト- R Objects"
+author: "Joe Saito"
+showonlyimage: true
+draft: false
+image: ""
+weight: 0
+type: "post"
+description: "R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。"
+categories: ["R言語","チュートリアル"]
+tags: ["オブジェクト","objects"]
+---
+
+<link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="section level3">
+<h3>オブジェクトとは</h3>
+<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/jjkBsU4AChM" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div class="section level3">
+<h3>オブジェクトの作成</h3>
+<pre class="r"><code>x &lt;- 2 + 2
+x</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>y &lt;- 5 * 5
+y</code></pre>
+<pre><code>## [1] 25</code></pre>
+<pre class="r"><code>myname &lt;- &quot;Joe&quot;
+myname</code></pre>
+<pre><code>## [1] &quot;Joe&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>作成したオブジェクト名を確認</h3>
+<pre class="r"><code>objects()</code></pre>
+<pre><code>## [1] &quot;myname&quot; &quot;x&quot;      &quot;y&quot;</code></pre>
+<pre class="r"><code>ls()</code></pre>
+<pre><code>## [1] &quot;myname&quot; &quot;x&quot;      &quot;y&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>ワーキングディレクトリ</h3>
+<pre class="r"><code>getwd()  #確認
+setwd(&quot;ディレクトリ名&quot;)  #変更</code></pre>
+</div>
+<div class="section level3">
+<h3>オブジェクトの保存</h3>
+<pre class="r"><code>save(x, y, myname, file = &quot;ファイル名.RData&quot;)  #x,y,mynameを保存</code></pre>
+</div>
+<div class="section level3">
+<h3>オブジェクトの読み込み</h3>
+<pre class="r"><code>load(&quot;ファイル名.RData&quot;)</code></pre>
+</div>
+<div class="section level3">
+<h3>オブジェクトの削除</h3>
+<pre class="r"><code>rm(x)  #xを削除
+rm(x, y)  #x,y,mynameを削除
+rm(list = objects())  #全て削除</code></pre>
+</div>

@@ -1,0 +1,68 @@
+---
+date: "2017-07-13"
+title: "R言語 オブジェクト- R Objects"
+author: "Joe Saito"
+showonlyimage: true
+draft: false
+image: ""
+weight: 0
+type: "post"
+description: "R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。"
+categories: ["R言語","チュートリアル"]
+tags: ["オブジェクト","objects"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy.opts = list(width.cutoff = 60),
+                      tidy = TRUE, 
+                      out.width = '95%')
+```
+
+```{r, include = FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+### オブジェクトとは
+
+<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/jjkBsU4AChM" frameborder="0" allowfullscreen></iframe>
+
+### オブジェクトの作成
+```{r}
+x <- 2 + 2
+x
+y <- 5 * 5
+y
+myname <- "Joe"
+myname
+```
+
+### 作成したオブジェクト名を確認
+```{r}
+objects()
+ls()
+```
+
+### ワーキングディレクトリ
+```{r  eval=FALSE}
+getwd() #確認
+setwd("ディレクトリ名") #変更
+```
+
+### オブジェクトの保存
+```{r  eval=FALSE}
+save(x, y, myname, file = "ファイル名.RData") #x,y,mynameを保存
+```
+
+### オブジェクトの読み込み
+```{r  eval=FALSE}
+load("ファイル名.RData")
+```
+
+### オブジェクトの削除
+```{r eval=FALSE}
+rm(x) #xを削除
+rm(x, y) #x,y,mynameを削除
+rm(list = objects()) #全て削除
+```
+
