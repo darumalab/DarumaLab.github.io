@@ -4,11 +4,10 @@ title: "R言語 オブジェクト- R Objects"
 author: "Joe Saito"
 showonlyimage: true
 draft: false
-image: ""
 weight: 0
 type: "post"
 description: "R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。"
-categories: ["R言語","チュートリアル"]
+categories: ["チュートリアル"]
 tags: ["オブジェクト","objects"]
 ---
 
