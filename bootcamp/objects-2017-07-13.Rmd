@@ -5,6 +5,7 @@ author: "Joe Saito"
 showonlyimage: false
 draft: false
 image: ""
+image2: "bootcamp/img/cover.jpg"
 weight: 0
 type: "post"
 description: "R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。"
@@ -26,6 +27,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ### オブジェクトとは
 
 <iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/jjkBsU4AChM" frameborder="0" allowfullscreen></iframe>
+
 
 ### オブジェクトの作成
 ```{r}

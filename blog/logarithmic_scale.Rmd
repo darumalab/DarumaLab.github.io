@@ -8,6 +8,7 @@ author: "Joe Saito"
 showonlyimage: true
 draft: false
 image: "blog/img/scale.jpg"
+image2: "blog/img/scale.jpg"
 weight: 0
 type: "post"
 description: "チャートを作る：線形目盛と対数目盛を使い分ける。"
