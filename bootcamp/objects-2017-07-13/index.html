@@ -4,24 +4,29 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>R言語 オブジェクト- R Objects</title>
 <meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
-<meta property="og:site_name" content="ベイカー・ストリート" />
+
 <meta property="og:title" content="R言語 オブジェクト- R Objects" />
-<meta property="og:url" content="https://darumalab.github.io/bootcamp/objects-2017-07-13/" />
 <meta property="og:type" content="article" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="all,follow">
-<meta name="googlebot" content="index,follow,snippet,archive">
-<meta property="og:locale" content="ja">
+<meta property="og:url" content="https://darumalab.github.io/bootcamp/objects-2017-07-13/" />
 <meta property="og:description" content="オブジェクトとは    オブジェクトの作成 x &lt;- 2 &#43; 2 x ## [1] 4 y &lt;- 5 * 5 y ## [1] 25 myname &lt;- &quot;Joe&quot; myname ## [1] &quot;Joe&quot;  作成したオブジェクト名を確認 objects() ## [1] &quot;myname&quot; &quot;x&quot; &quot;y&quot; ls() ## [1] &quot;myname&quot; &quot;x&quot; &quot;y&quot;  ワーキングディレクトリ getwd() #確認 setwd(&quot;ディレクトリ名&quot;) #変更  オブジェクトの保存 save(x, y, myname, file = &quot;ファイル名.RData&quot;) #x,y,mynameを保存  オブジェクトの読み込み load(&quot;ファイル名.RData&quot;)  オブジェクトの削除 rm(x) #xを削除 rm(x, y) #x,y,mynameを削除 rm(list = objects()) #全て削除  " />
 
 <meta property="og:updated_time" content="2017-07-13 00:00:00 &#43;0000 UTC"/>
 
+<meta property="og:site_name" content="ベイカー・ストリート" />
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://darumalab.github.io/img/icon/top_icon_bigger.jpg" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
 
 <link rel="stylesheet" href="https://darumalab.github.io/css/bootstrap.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
 <link rel="stylesheet" href="https://darumalab.github.io/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.carousel.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.theme.css">
+
+
 
 
   
@@ -59,9 +64,9 @@ ga('send', 'pageview');
           <div class="row row-offcanvas row-offcanvas-left">
               <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
   <div class="sidebar-content">
-    <h1 class="sidebar-heading"><a href="/"><B>ベイカー・ストリート</B></a></h1>
+    <h1 class="sidebar-heading"><a href="https://darumalab.github.io/"><B>ベイカー・ストリート</B></a></h1>
 
-    <a href="/"><img style="max-width: 150px; height: auto;" src="/img/icon/top_icon_bigger.jpg"/></a>
+    <a href="https://darumalab.github.io/"><img style="max-width: 150px; height: auto;" src="https://darumalab.github.io/img/icon/top_icon_bigger.jpg"/></a>
 
     
       <p class="sidebar-p"></p>
@@ -146,14 +151,14 @@ ga('send', 'pageview');
 <div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
   <div class="small-navbar visible-xs">
   <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
-  <h1 class="small-navbar-heading"><a href="/">ベイカー・ストリート</a></h1>
+  <h1 class="small-navbar-heading"><a href="https://darumalab.github.io/">ベイカー・ストリート</a></h1>
 </div>
 
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
          <h1>R言語 オブジェクト- R Objects</h1>
-         <link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+         <link href="https://darumalab.github.io/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
 <div class="section level3">
