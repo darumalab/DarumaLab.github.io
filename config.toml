@@ -6,6 +6,13 @@ languageCode = "ja"
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-101594477-1"
+enableRobotsTXT = true
+canonifyURLs = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 [params]
   # Style options: default (pink), blue, green, pink, red, sea, violet

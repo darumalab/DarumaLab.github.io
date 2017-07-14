@@ -2,24 +2,29 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {{ with .Title }}<title>{{ . }}</title>{{ end }}
 <meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
-<meta property="og:site_name" content="{{ .Site.Title }}" />
+
 <meta property="og:title" content="{{ .Title }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="article" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="all,follow">
-<meta name="googlebot" content="index,follow,snippet,archive">
-<meta property="og:locale" content="{{ .Site.LanguageCode }}">
+<meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:description" content="{{if .IsPage}}{{ .Summary }}{{else}}{{.Site.Params.description}}{{end}}" />
 {{ if .IsPage }}
 <meta property="og:updated_time" content="{{ .Date }}"/>
 {{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:locale" content="{{ .Site.LanguageCode }}">
+<meta property="og:image" content="https://darumalab.github.io/img/icon/top_icon_bigger.jpg" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
 
 <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
 <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
 <link rel="stylesheet" href="{{ "css/owl.carousel.css" | absURL }}">
 <link rel="stylesheet" href="{{ "css/owl.theme.css" | absURL }}">
+
+
 <!-- Theme stylesheet, if possible do not edit this stylesheet -->
 {{ with .Site.Params.style }}
   <!--<link href="{{ printf "css/style.%s.css" . | absURL }}" rel="stylesheet" id="theme-stylesheet">-->
