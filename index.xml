@@ -7,18 +7,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2016 Joe Saito</copyright>
-    <lastBuildDate>Thu, 13 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darumalab.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Rプログラミングと統計</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-16-tutorials/</link>
+      <pubDate>Sun, 16 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-16-tutorials/</guid>
+      <description> Part 3: R言語 オブジェクト - R Objects
+オブジェクトの基本的な扱い方  Part 10: R言語 データのタイプ - R Data Types
+Rでよく使われるデータのタイプ  Part 10: R言語 データの読み込み - R Importing Data
+エクセル等のデータの読み込み方 </description>
+    </item>
+    
+    <item>
+      <title>R言語 データの読み込み- R Importing Data</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-14-import/</link>
+      <pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-14-import/</guid>
+      <description>データの読み込み    CSVファルの読み込み dat1 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;,&amp;quot;)  タブ区切りファイルの読み込み dat2 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;\t&amp;quot;)  URLからデータを読み込み datPath &amp;lt;- &amp;quot;&amp;quot; dat3 &amp;lt;- read.table(file = datPath, header = TRUE, sep = &amp;quot;,&amp;quot;)  日本語のファイルを読み込む時にエラーが発生する場合 dat1 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;,&amp;quot;, fileEncoding = &amp;quot;CP932&amp;quot;)  CSVファイルの書き出し datPath &amp;lt;- &amp;quot;&amp;quot; write.csv(dat1, file = datPath, row.</description>
+    </item>
+    
+    <item>
       <title>R言語 オブジェクト- R Objects</title>
-      <link>https://darumalab.github.io/bootcamp/objects-2017-07-13/</link>
+      <link>https://darumalab.github.io/bootcamp/2017-07-13-objects/</link>
       <pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://darumalab.github.io/bootcamp/objects-2017-07-13/</guid>
+      <guid>https://darumalab.github.io/bootcamp/2017-07-13-objects/</guid>
       <description>オブジェクトとは    オブジェクトの作成 x &amp;lt;- 2 + 2 x ## [1] 4 y &amp;lt;- 5 * 5 y ## [1] 25 myname &amp;lt;- &amp;quot;Joe&amp;quot; myname ## [1] &amp;quot;Joe&amp;quot;  作成したオブジェクト名を確認 objects() ## [1] &amp;quot;myname&amp;quot; &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; ls() ## [1] &amp;quot;myname&amp;quot; &amp;quot;x&amp;quot; &amp;quot;y&amp;quot;  ワーキングディレクトリ getwd() #確認 setwd(&amp;quot;ディレクトリ名&amp;quot;) #変更  オブジェクトの保存 save(x, y, myname, file = &amp;quot;ファイル名.RData&amp;quot;) #x,y,mynameを保存  オブジェクトの読み込み load(&amp;quot;ファイル名.RData&amp;quot;)  オブジェクトの削除 rm(x) #xを削除 rm(x, y) #x,y,mynameを削除 rm(list = objects()) #全て削除  </description>
+    </item>
+    
+    <item>
+      <title>R言語 データのタイプ- R Data Types</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-17-type/</link>
+      <pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-17-type/</guid>
+      <description>数値データ num &amp;lt;- 7  オブジェクトが数値データなのかチェック is.numeric(num) ## [1] TRUE class(num) ## [1] &amp;quot;numeric&amp;quot;  オブジェクトが整数なのかチェック is.integer(num) ## [1] FALSE num2 &amp;lt;- 7L is.integer(num2) ## [1] TRUE  文字列データ char &amp;lt;- &amp;quot;テキスト&amp;quot; char2 &amp;lt;- factor(&amp;quot;テキスト&amp;quot;) #文字列をファクターとして保存  オブジェクトが文字列データなのかチェック is.character(char) ## [1] TRUE class(char) ## [1] &amp;quot;character&amp;quot;  論理データ logi &amp;lt;- TRUE logi2 &amp;lt;- FALSE logi3 &amp;lt;- NA  オブジェクトが論理データなのかチェック is.logical(logi) ## [1] TRUE  日付データ date &amp;lt;- as.Date(&amp;quot;YYYY-MM-DD&amp;quot;) #例:2017-04-15 date2 &amp;lt;- as.</description>
     </item>
     
     <item>
@@ -27,8 +57,7 @@
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/blog/logarithmic_scale/</guid>
-      <description>This is a post written in RMarkdown (*.Rmd) to understand reasons to use logarithmic scales in charts.
-この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins1さん、Gregory Kanevsky2さん、Hunkar Ozyasar 3さんの記事を参考にしています。
+      <description>この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins1さん、Gregory Kanevsky2さん、Hunkar Ozyasar 3さんの記事を参考にしています。
 キーポイント 線形目盛と対数目盛りの違い：
  線形目盛（Linear Scale） : 等間隔の幅が一定の量の変化を表している。 対数目盛（Logarithmic Scale） : 等間隔の幅が量の変化率を表している。  対数目盛（Logarithmic Scale）を使うケース4：
 データが狭い範囲に密集していない時に使う。極端な外れ値があるデータ、広い範囲の値を持をロングテール型のデータをきれいに可視化できる。 対数目盛は量の変化率を示しているので、指数関数的増加や指数関数的減衰が見られるデータの可視化に適している。    金貨のチャート 1885年の秋のある日、アーサー・ドイルは株式仲買店員の友人に稼ぎの一部を預けることにした。大学卒業後、開業した診療所の仕事がやっと軌道に乗りはじめていた。経済的に困っていたわけではなく、資金繰りが苦しい友人を助けるつもりだった。預けたソブリン金貨には複利の利子がつく。「金貨は必ず毎年0.5倍ずつ増えていく」

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on ベイカー・ストリート</title>
+    <link>/tags/data/</link>
+    <description>Recent content in Data on ベイカー・ストリート</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;2016 Joe Saito</copyright>
+    <lastBuildDate>Fri, 14 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R言語 データの読み込み- R Importing Data</title>
+      <link>/bootcamp/2017-07-14-import/</link>
+      <pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/bootcamp/2017-07-14-import/</guid>
+      <description>データの読み込み    CSVファルの読み込み dat1 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;,&amp;quot;)  タブ区切りファイルの読み込み dat2 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;\t&amp;quot;)  URLからデータを読み込み datPath &amp;lt;- &amp;quot;&amp;quot; dat3 &amp;lt;- read.table(file = datPath, header = TRUE, sep = &amp;quot;,&amp;quot;)  日本語のファイルを読み込む時にエラーが発生する場合 dat1 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;,&amp;quot;, fileEncoding = &amp;quot;CP932&amp;quot;)  CSVファイルの書き出し datPath &amp;lt;- &amp;quot;&amp;quot; write.csv(dat1, file = datPath, row.</description>
+    </item>
+    
+  </channel>
+</rss>

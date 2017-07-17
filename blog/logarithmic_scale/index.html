@@ -5,18 +5,15 @@
 <title>線形目盛と対数目盛 - Linear Scale and Logarithmic Scale</title>
 <meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
 <meta name="description" content="チャートを作る：線形目盛と対数目盛を使い分ける。"/>
-
 <meta property="og:title" content="線形目盛と対数目盛 - Linear Scale and Logarithmic Scale - ベイカー・ストリート">
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darumalab.github.io/blog/logarithmic_scale/" />
-
 <meta property="og:description" content="チャートを作る：線形目盛と対数目盛を使い分ける。">
 <meta property="og:site_name" content="ベイカー・ストリート" />
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://darumalab.github.io/img/icon/top_icon_bigger.jpg" />
-<meta property="article:section" content="R言語" />
+<meta property="article:section" content="r言語" />
 <meta property="article:published_time" content="2017-05-02 00:00:00 &#43;0000 UTC" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
@@ -48,13 +45,6 @@
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.theme.css">
 <link rel="canonical" href="https://darumalab.github.io/blog/logarithmic_scale/" />
 <link rel="author" href="https://plus.google.com/u/1/110782802254248820154"/>
-
-
-
-
-
-
-
 <link rel="stylesheet" href="https://darumalab.github.io/css/highlight.css">
 <script src="https://darumalab.github.io/js/highlight.pack.js"></script>
 <script>
@@ -71,6 +61,14 @@ ga('create', 'UA-101594477-1', 'auto');
 ga('send', 'pageview');
 </script>
 <script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+
 
 </head>
 <body>
@@ -96,10 +94,6 @@ ga('send', 'pageview');
   
   
   
-  <a href="https://twitter.com/yodaruma" data-animate-hover="pulse" class="external twitter">
-    <i class="fa fa-twitter"></i>
-  </a>
-  
   
   
   <a href="mailto:datadaruma@gmail.com" data-animate-hover="pulse" class="email">
@@ -108,10 +102,6 @@ ga('send', 'pageview');
   
   
   
-  
-  <a href="https://github.com/darumalab" data-animate-hover="pulse">
-    <i class="fa fa-github"></i>
-  </a>
   
   
   <a href="https://www.youtube.com/channel/UC7aVZqDYKM2fJAGioTiJCxQ" data-animate-hover="pulse">
@@ -132,7 +122,7 @@ ga('send', 'pageview');
       <header>Categories</header>
       <div>
         <ul class="terms">
-          <li><a href="https://darumalab.github.io/categories/r%E8%A8%80%E8%AA%9E">r言語</a></li><li><a href="https://darumalab.github.io/categories/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB">チュートリアル</a></li>
+          <li><a href="https://darumalab.github.io/categories/r%E8%A8%80%E8%AA%9E">r言語</a></li>
         </ul>
       </div>
     </section>
@@ -141,7 +131,7 @@ ga('send', 'pageview');
       <header>Tags</header>
       <div>
         <ul class="terms">
-          <li><a href="https://darumalab.github.io/tags/charts">charts</a></li><li><a href="https://darumalab.github.io/tags/linear">linear</a></li><li><a href="https://darumalab.github.io/tags/log">log</a></li><li><a href="https://darumalab.github.io/tags/objects">objects</a></li><li><a href="https://darumalab.github.io/tags/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88">オブジェクト</a></li><li><a href="https://darumalab.github.io/tags/%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88">チャート</a></li><li><a href="https://darumalab.github.io/tags/%E5%AF%BE%E6%95%B0">対数</a></li><li><a href="https://darumalab.github.io/tags/%E7%B7%9A%E5%BD%A2">線形</a></li>
+          <li><a href="https://darumalab.github.io/tags/charts">charts</a></li><li><a href="https://darumalab.github.io/tags/linear">linear</a></li><li><a href="https://darumalab.github.io/tags/log">log</a></li><li><a href="https://darumalab.github.io/tags/%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88">チャート</a></li><li><a href="https://darumalab.github.io/tags/%E5%AF%BE%E6%95%B0">対数</a></li><li><a href="https://darumalab.github.io/tags/%E7%B7%9A%E5%BD%A2">線形</a></li>
         </ul>
       </div>
     </section>
@@ -176,7 +166,6 @@ ga('send', 'pageview');
          <link href="https://darumalab.github.io/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<p>This is a post written in RMarkdown (<code>*.Rmd</code>) to understand reasons to use logarithmic scales in charts.</p>
 <p>この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>さん、Gregory Kanevsky<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>さん、Hunkar Ozyasar <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>さんの記事を参考にしています。</p>
 <div class="section level3">
 <h3>キーポイント</h3>
@@ -206,11 +195,9 @@ plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(b
     10, by = 1))</code></pre>
 <p><img src="https://darumalab.github.io/blog/logarithmic_scale_files/figure-html/unnamed-chunk-3-1.png" width="95%" /></p>
 <p><em>チャート1:金貨と預入期間</em></p>
-<p> </p>
 <p>10年が経ち、友人が約束した通り預けた金貨は増えていった。</p>
 <p>チャート1は、金貨と預入期間の関係を線形目盛で可視化している。垂直軸であるY軸上の等間隔の幅が一定の量の変化を示している。1cmの幅が金貨100枚の増加を表している場合、200枚から300枚への増加も1cmの幅がある。</p>
 <p>アーサーは友人に渡された線形目盛のチャートをながめながら、5年目から10年目の金貨の増え方に比べて、1年目から5年目までの金貨の増え方が分かりづらいと思った。アーサーは友人に新しいチャートを用意させることにした。「5年目までの金貨の増え方をもっと分かりやすく見せてくれ」</p>
-<p> </p>
 </div>
 <div id="log" class="section level3">
 <h3>対数目盛</h3>
@@ -218,12 +205,12 @@ plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(b
 plt + scale_x_continuous(breaks = seq(0, 10, by = 1))</code></pre>
 <p><img src="https://darumalab.github.io/blog/logarithmic_scale_files/figure-html/unnamed-chunk-4-1.png" width="95%" /></p>
 <p><em>チャート2:金貨と預入期間</em></p>
-<p> </p>
 <p>友人はアーサーの要望を受けて新しいチャートを用意した。</p>
 <p>チャート2は、金貨と預入期間の関係を対数目盛で可視化している。垂直軸であるY軸上の等間隔の幅が量の変化率を示している。1cmの幅が金貨の50%の増加を表している場合、同軸上の異なる位置でも1cmの幅は50%の増加を示している。</p>
 <p>金貨は毎年同じ増加率を達成していた。アーサーは友人に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているチャートを<strong>片対数(semi-log)チャート</strong>と呼ぶ。<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>片対数チャートを見ると増加傾向は毎年同じ比率を保っていることが分かった。</p>
 <p>1年目から5年目まではわずかな増加だった金貨は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、チャート1では1年目から5年目までの変化がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。</p>
 <p> </p>
+<p>This is a post written in RMarkdown (<code>*.Rmd</code>) to understand reasons to use logarithmic scales in charts.</p>
 </div>
 <div class="footnotes">
 <hr />
