@@ -11,15 +11,15 @@ image: "blog/img/scale.jpg"
 image2: "blog/img/scale.jpg"
 weight: 0
 type: "post"
+
 description: "チャートを作る：線形目盛と対数目盛を使い分ける。"
-categories: ["R言語"]
+categories: ["r言語"]
 tags: ["チャート","対数","線形","charts","log","linear"]
 ---
 
 <link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<p>This is a post written in RMarkdown (<code>*.Rmd</code>) to understand reasons to use logarithmic scales in charts.</p>
 <p>この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>さん、Gregory Kanevsky<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>さん、Hunkar Ozyasar <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>さんの記事を参考にしています。</p>
 <div class="section level3">
 <h3>キーポイント</h3>
@@ -49,11 +49,9 @@ plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(b
     10, by = 1))</code></pre>
 <p><img src="/blog/logarithmic_scale_files/figure-html/unnamed-chunk-3-1.png" width="95%" /></p>
 <p><em>チャート1:金貨と預入期間</em></p>
-<p> </p>
 <p>10年が経ち、友人が約束した通り預けた金貨は増えていった。</p>
 <p>チャート1は、金貨と預入期間の関係を線形目盛で可視化している。垂直軸であるY軸上の等間隔の幅が一定の量の変化を示している。1cmの幅が金貨100枚の増加を表している場合、200枚から300枚への増加も1cmの幅がある。</p>
 <p>アーサーは友人に渡された線形目盛のチャートをながめながら、5年目から10年目の金貨の増え方に比べて、1年目から5年目までの金貨の増え方が分かりづらいと思った。アーサーは友人に新しいチャートを用意させることにした。「5年目までの金貨の増え方をもっと分かりやすく見せてくれ」</p>
-<p> </p>
 </div>
 <div id="log" class="section level3">
 <h3>対数目盛</h3>
@@ -61,12 +59,12 @@ plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(b
 plt + scale_x_continuous(breaks = seq(0, 10, by = 1))</code></pre>
 <p><img src="/blog/logarithmic_scale_files/figure-html/unnamed-chunk-4-1.png" width="95%" /></p>
 <p><em>チャート2:金貨と預入期間</em></p>
-<p> </p>
 <p>友人はアーサーの要望を受けて新しいチャートを用意した。</p>
 <p>チャート2は、金貨と預入期間の関係を対数目盛で可視化している。垂直軸であるY軸上の等間隔の幅が量の変化率を示している。1cmの幅が金貨の50%の増加を表している場合、同軸上の異なる位置でも1cmの幅は50%の増加を示している。</p>
 <p>金貨は毎年同じ増加率を達成していた。アーサーは友人に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているチャートを<strong>片対数(semi-log)チャート</strong>と呼ぶ。<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>片対数チャートを見ると増加傾向は毎年同じ比率を保っていることが分かった。</p>
 <p>1年目から5年目まではわずかな増加だった金貨は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、チャート1では1年目から5年目までの変化がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。</p>
 <p> </p>
+<p>This is a post written in RMarkdown (<code>*.Rmd</code>) to understand reasons to use logarithmic scales in charts.</p>
 </div>
 <div class="footnotes">
 <hr />

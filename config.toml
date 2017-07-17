@@ -43,12 +43,12 @@ canonifyURLs = true
   url = ""
 
   #[[params.navlinks]]
-  #name = "Blog"
-  #url = "blog/"
+  #name = "チュートリアル"
+  #url = "bootcamp/"
 
   #[[params.navlinks]]
-  # name = "About"
-  # url = "about/"
+  #name = "About"
+  #url = "about/"
 
   #[[params.navlinks]]
   # name = "Get in touch"
@@ -58,10 +58,10 @@ canonifyURLs = true
   # facebook      = "full page or profile url in facebook"
   # googleplus    = "full profile url in googleplus"
   email         = "datadaruma@gmail.com"
-  twitter       = "https://twitter.com/yodaruma"
+  # twitter       = "https://twitter.com/yodaruma"
   # linkedin      = "full profile url in linkedin"
   # stackoverflow = "full profile url in stackoverflow"
   # instagram     = "full profile url in instagram"
-  github        = "https://github.com/darumalab"
+  # github        = "https://github.com/darumalab"
   youtube       = "https://www.youtube.com/channel/UC7aVZqDYKM2fJAGioTiJCxQ"
   rss          = "index.xml"

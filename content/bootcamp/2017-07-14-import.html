@@ -1,0 +1,47 @@
+---
+date: "2017-07-14"
+title: "R言語 データの読み込み- R Importing Data"
+author: "斉藤ジョー"
+showonlyimage: false
+draft: false
+image: ""
+image2: "bootcamp/img/cover.jpg"
+weight: 0
+type: ""
+description: "R言語のチュートリアル Part 10: データを読み込む方法"
+
+---
+
+<link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="section level3">
+<h3>データの読み込み</h3>
+<div class="video-container">
+<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/9vyK7WTjQus" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="csv" class="section level3">
+<h3>CSVファルの読み込み</h3>
+<pre class="r"><code>dat1 &lt;- read.table(file = file.choose(), header = TRUE, sep = &quot;,&quot;)</code></pre>
+</div>
+<div class="section level3">
+<h3>タブ区切りファイルの読み込み</h3>
+<pre class="r"><code>dat2 &lt;- read.table(file = file.choose(), header = TRUE, sep = &quot;\t&quot;)</code></pre>
+</div>
+<div id="url" class="section level3">
+<h3>URLからデータを読み込み</h3>
+<pre class="r"><code>datPath &lt;- &quot;&quot;
+dat3 &lt;- read.table(file = datPath, header = TRUE, sep = &quot;,&quot;)</code></pre>
+</div>
+<div class="section level3">
+<h3>日本語のファイルを読み込む時にエラーが発生する場合</h3>
+<pre class="r"><code>dat1 &lt;- read.table(file = file.choose(), header = TRUE, sep = &quot;,&quot;, 
+    fileEncoding = &quot;CP932&quot;)</code></pre>
+</div>
+<div id="csv" class="section level3">
+<h3>CSVファイルの書き出し</h3>
+<pre class="r"><code>datPath &lt;- &quot;&quot;
+write.csv(dat1, file = datPath, row.names = FALSE)</code></pre>
+</div>

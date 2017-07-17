@@ -1,0 +1,58 @@
+---
+date: "2017-07-14"
+title: "R言語 データの読み込み- R Importing Data"
+author: "斉藤ジョー"
+showonlyimage: false
+draft: false
+image: ""
+image2: "bootcamp/img/cover.jpg"
+weight: 0
+type: ""
+description: "R言語のチュートリアル Part 10: データを読み込む方法"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy.opts = list(width.cutoff = 60),
+                      tidy = TRUE, 
+                      out.width = '95%')
+```
+
+```{r, include = FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+###データの読み込み
+
+<div class="video-container">
+<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/9vyK7WTjQus" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+###CSVファルの読み込み
+```{r eval=FALSE}
+dat1 <- read.table(file = file.choose(), header = TRUE, sep = ",")
+```
+
+###タブ区切りファイルの読み込み
+```{r eval=FALSE}
+dat2 <- read.table(file = file.choose(), header = TRUE, sep = "\t")
+```
+
+###URLからデータを読み込み
+```{r eval=FALSE}
+datPath <- ""
+dat3 <- read.table(file = datPath, header = TRUE, sep = ",")
+```
+
+###日本語のファイルを読み込む時にエラーが発生する場合
+```{r eval=FALSE}
+dat1 <- read.table(file = file.choose(), header = TRUE, sep = ",", fileEncoding="CP932")
+```
+
+###CSVファイルの書き出し
+```{r eval=FALSE}
+datPath <- ""
+write.csv(dat1, file = datPath, row.names =FALSE)
+```

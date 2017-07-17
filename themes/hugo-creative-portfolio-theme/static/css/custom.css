@@ -1,35 +1,34 @@
-/* your styles go here */
-
-/* your styles go here */
 .holder {
   width: auto;
   display: inline-block;
 }
-
 .with40 {
   width: 40%; /* Will shrink image to 30% of its original width */
   height: auto;
 }​
+
+
+/*
 =====================
 SIDEBAR + RIGHT COLUMN
 =====================
-
 */
-#sidebar {
+
+.sidebar {
   padding-top: 40px;
 }
 /*modified sidebar to follow scroll */
+.sidebar-content {
 .sidebar-content {
     position: fixed;
     width: inherit;
     z-index: 0;
     padding: 0 1em 0 0.2em;
-}
-@media screen and (min-width: 992px) {
-  .sidebar-content {
+    .sidebar-content {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
 }
 .sidebar-heading {
   font-size: 18px;
@@ -67,6 +66,7 @@ SIDEBAR + RIGHT COLUMN
   font-family: 'FontAwesome';
   content: '\f105';
   margin: 0 5px 0 -15px;
+
   /*color: #999999;*/
 }
 .sidebar-menu li.active a {
@@ -102,7 +102,7 @@ SIDEBAR + RIGHT COLUMN
 @media (min-width: 1200px) {
   .content-column-content {
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 10px;
   }
 }
 .content-column-content p.lead {
@@ -151,13 +151,11 @@ SIDEBAR + RIGHT COLUMN
   /* color: #000;*/
   text-decoration: none;
 }
+
 /*
-
-
 =====================
 OFF-CANVAS SIDEBAR BEHAVIOUR
 =====================
-
 */
 
 @media screen and (max-width: 767px) {
@@ -197,11 +195,13 @@ OFF-CANVAS SIDEBAR BEHAVIOUR
     /* 6 columns */
   }
 }
+
 /*
 =====================
 Taxsonomies
 =====================
 */
+
 .terms {
   margin: -.25rem;
 }
@@ -222,12 +222,12 @@ Taxsonomies
   line-height: 1.75rem;
 }
 
-
 /*
 =====================
 Videos
 =====================
 */
+
 .center_iframe{
   display: block;
   margin: auto;
@@ -249,9 +249,78 @@ width: 100%;
 height: 100%;
 }
 
-
 /*
 =====================
-EKKO LIGHTBOX
+GITHUB
 =====================
 */
+
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  padding-bottom: 10px;
+  background-color: white;
+  padding-left: 30px;
+  padding-right: 30px;  }
+
+h1 {
+  font-size: 36px;
+  color: black; } /*34*/
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 20px; } /*18*/
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+pre{
+  margin: 15px 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+ul, ol {
+  padding-left: 30px; }
+
+img {
+  max-width: 100%; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+ }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+  background-color: transparent;
+  border: none; }

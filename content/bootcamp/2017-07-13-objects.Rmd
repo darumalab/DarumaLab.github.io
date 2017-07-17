@@ -7,10 +7,8 @@ draft: false
 image: ""
 image2: "bootcamp/img/cover.jpg"
 weight: 0
-type: "post"
+type: ""
 description: "R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。"
-categories: ["チュートリアル"]
-tags: ["オブジェクト","objects"]
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE,
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-### オブジェクトとは
+###オブジェクトとは
 
 <div class="video-container">
 <iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/jjkBsU4AChM" frameborder="0" allowfullscreen></iframe>
@@ -32,7 +30,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 
 
-### オブジェクトの作成
+###オブジェクトの作成
 ```{r}
 x <- 2 + 2
 x
@@ -42,29 +40,29 @@ myname <- "Joe"
 myname
 ```
 
-### 作成したオブジェクト名を確認
+###作成したオブジェクト名を確認
 ```{r}
 objects()
 ls()
 ```
 
-### ワーキングディレクトリ
+###ワーキングディレクトリ
 ```{r  eval=FALSE}
 getwd() #確認
 setwd("ディレクトリ名") #変更
 ```
 
-### オブジェクトの保存
+###オブジェクトの保存
 ```{r  eval=FALSE}
 save(x, y, myname, file = "ファイル名.RData") #x,y,mynameを保存
 ```
 
-### オブジェクトの読み込み
+###オブジェクトの読み込み
 ```{r  eval=FALSE}
 load("ファイル名.RData")
 ```
 
-### オブジェクトの削除
+###オブジェクトの削除
 ```{r eval=FALSE}
 rm(x) #xを削除
 rm(x, y) #x,y,mynameを削除
