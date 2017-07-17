@@ -24,51 +24,51 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 
 <div class="video-container">
-<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/fQc4gWjyoZc" frameborder="0"></iframe>
+<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/fQc4gWjyoZc" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
-## 数値データ
+### 数値データ
 ```{r}
 num <- 7
 ```
-## オブジェクトが数値データなのかチェック
+### オブジェクトが数値データなのかチェック
 ```{r}
 is.numeric(num)
 class(num)
 ```
-## オブジェクトが整数なのかチェック
+### オブジェクトが整数なのかチェック
 ```{r}
 is.integer(num)
 num2 <- 7L
 is.integer(num2)
 ```
-## 文字列データ
+### 文字列データ
 ```{r}
 char <- "テキスト"
 char2 <- factor("テキスト") #文字列をファクターとして保存
 ```
-## オブジェクトが文字列データなのかチェック
+### オブジェクトが文字列データなのかチェック
 ```{r}
 is.character(char)
 class(char)
 ```
-## 論理データ
+### 論理データ
 ```{r}
 logi <- TRUE
 logi2 <- FALSE
 logi3 <- NA
 ```
-## オブジェクトが論理データなのかチェック
+### オブジェクトが論理データなのかチェック
 ```{r}
 is.logical(logi)
 ```
-## 日付データ
+### 日付データ
 ```{r  eval=FALSE}
 date <- as.Date("YYYY-MM-DD") #例:2017-04-15
 date2 <- as.POSIXct("YYYY-MM-DD 00:00")
 ```
-## オブジェクトが日付データなのかチェック
+### オブジェクトが日付データなのかチェック
 ```{r eval=FALSE}
 class(date)
 ```

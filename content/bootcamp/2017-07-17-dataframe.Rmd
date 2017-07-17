@@ -1,0 +1,105 @@
+---
+date: "2017-07-17"
+title: "R言語 データフレーム - R Data Frame"
+author: "斉藤ジョー"
+showonlyimage: false
+draft: false
+image: ""
+image2: "bootcamp/img/cover.jpg"
+weight: 0
+type: ""
+description: "R言語のチュートリアル Part 8: データフレームの扱い方について"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy.opts = list(width.cutoff = 60),
+                      tidy = TRUE, 
+                      out.width = '95%')
+```
+
+```{r, include = FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+<div class="video-container">
+<iframe class="center_iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+データフレーム Tips 大全(http://www.okadajp.org/RWiki/?%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0Tips%E5%A4%A7%E5%85%A8#t96e2dd9)
+
+observation, observed value:　観測値  
+variable:　変数  
+
+### ベクトル
+```{r}
+a <- 1:10
+b <- c("たま", "しろ", "くろ", "みけ", "ぶち", "ぽち", "ころ", NA, "じろ", "わん")
+c <- c("猫", "猫", "猫", "猫", "猫", "犬", "犬", "犬", "犬", "犬")
+d <- rep(c("♂", "♀"), times = 5)
+```
+
+### データフレーム
+```{r}
+dat <- data.frame(a, b)
+dat <- data.frame(年齢 = a, 名前 = b)
+dat <- data.frame(年齢 = a, 名前 = b, 種 = c, 性別 = d, stringsAsFactors = FALSE)
+```
+
+### 変数の名前
+```{r}
+names(dat)
+names(dat)[2]
+names(dat)[2] <- "呼び名"
+```
+
+### データのチェック
+```{r}
+head(dat)
+head(dat, n = 3)  #n:行数
+tail(dat)
+tail(dat, n = 3)
+```
+
+### データのタイプをチェック
+```{r}
+class(dat)
+str(dat)
+```
+
+### 個別のベクトルへアクセス
+```{r}
+dat$年齢
+class(dat$呼び名)
+class(dat$年齢)
+```
+
+### データフレーム内の要素へアクセス
+```{r}
+dat[2, 3]
+dat[3,]
+dat[, 3]
+dat[2:3, ]
+dat[1, 2:3]
+dat[c(2, 4),]
+dat[, "呼び名"]
+dat[, c("呼び名", "年齢")]
+
+dat[2, 2] <- "こじろう"  #値を上書き
+dat[is.na(dat$呼び名), ]  #欠損値を含む行
+dat[dat$年齢 < 5, ]  #年齢が５歳以下のサンプル
+dat[dat$呼び名　 %in% c("ころ", "じろ"), c(2, 4)]
+```
+
+### 個別のベクトルを抽出
+```{r}
+dat2 <- dat$呼び名
+class(dat2)
+```
+
+### データフレーム内にある個別のベクトルをデータフレームとして抽出
+```{r}
+dat2 <- dat[, "呼び名", drop = FALSE]
+class(dat2)
+```

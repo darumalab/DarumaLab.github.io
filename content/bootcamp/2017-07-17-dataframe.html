@@ -1,0 +1,157 @@
+---
+date: "2017-07-17"
+title: "R言語 データフレーム - R Data Frame"
+author: "斉藤ジョー"
+showonlyimage: false
+draft: false
+image: ""
+image2: "bootcamp/img/cover.jpg"
+weight: 0
+type: ""
+description: "R言語のチュートリアル Part 8: データフレームの扱い方について"
+---
+
+<link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="video-container">
+<iframe class="center_iframe" width="560" height="315" src frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<p>データフレーム Tips 大全(<a href="http://www.okadajp.org/RWiki/?%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0Tips%E5%A4%A7%E5%85%A8#t96e2dd9">http://www.okadajp.org/RWiki/?%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0Tips%E5%A4%A7%E5%85%A8#t96e2dd9</a>)</p>
+<p>observation, observed value:　観測値<br />
+variable:　変数</p>
+<div class="section level3">
+<h3>ベクトル</h3>
+<pre class="r"><code>a &lt;- 1:10
+b &lt;- c(&quot;たま&quot;, &quot;しろ&quot;, &quot;くろ&quot;, &quot;みけ&quot;, &quot;ぶち&quot;, &quot;ぽち&quot;, 
+    &quot;ころ&quot;, NA, &quot;じろ&quot;, &quot;わん&quot;)
+c &lt;- c(&quot;猫&quot;, &quot;猫&quot;, &quot;猫&quot;, &quot;猫&quot;, &quot;猫&quot;, &quot;犬&quot;, &quot;犬&quot;, &quot;犬&quot;, 
+    &quot;犬&quot;, &quot;犬&quot;)
+d &lt;- rep(c(&quot;♂&quot;, &quot;♀&quot;), times = 5)</code></pre>
+</div>
+<div class="section level3">
+<h3>データフレーム</h3>
+<pre class="r"><code>dat &lt;- data.frame(a, b)
+dat &lt;- data.frame(年齢 = a, 名前 = b)
+dat &lt;- data.frame(年齢 = a, 名前 = b, 種 = c, 性別 = d, 
+    stringsAsFactors = FALSE)</code></pre>
+</div>
+<div class="section level3">
+<h3>変数の名前</h3>
+<pre class="r"><code>names(dat)</code></pre>
+<pre><code>## [1] &quot;年齢&quot; &quot;名前&quot; &quot;種&quot;   &quot;性別&quot;</code></pre>
+<pre class="r"><code>names(dat)[2]</code></pre>
+<pre><code>## [1] &quot;名前&quot;</code></pre>
+<pre class="r"><code>names(dat)[2] &lt;- &quot;呼び名&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>データのチェック</h3>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 1    1   たま 猫    ♂
+## 2    2   しろ 猫    ♀
+## 3    3   くろ 猫    ♂
+## 4    4   みけ 猫    ♀
+## 5    5   ぶち 猫    ♂
+## 6    6   ぽち 犬    ♀</code></pre>
+<pre class="r"><code>head(dat, n = 3)  #n:行数</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 1    1   たま 猫    ♂
+## 2    2   しろ 猫    ♀
+## 3    3   くろ 猫    ♂</code></pre>
+<pre class="r"><code>tail(dat)</code></pre>
+<pre><code>##    年齢 呼び名 種 性別
+## 5     5   ぶち 猫    ♂
+## 6     6   ぽち 犬    ♀
+## 7     7   ころ 犬    ♂
+## 8     8   &lt;NA&gt; 犬    ♀
+## 9     9   じろ 犬    ♂
+## 10   10   わん 犬    ♀</code></pre>
+<pre class="r"><code>tail(dat, n = 3)</code></pre>
+<pre><code>##    年齢 呼び名 種 性別
+## 8     8   &lt;NA&gt; 犬    ♀
+## 9     9   じろ 犬    ♂
+## 10   10   わん 犬    ♀</code></pre>
+</div>
+<div class="section level3">
+<h3>データのタイプをチェック</h3>
+<pre class="r"><code>class(dat)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>str(dat)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    10 obs. of  4 variables:
+##  $ 年齢  : int  1 2 3 4 5 6 7 8 9 10
+##  $ 呼び名: chr  &quot;たま&quot; &quot;しろ&quot; &quot;くろ&quot; &quot;みけ&quot; ...
+##  $ 種    : chr  &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; ...
+##  $ 性別  : chr  &quot;♂&quot; &quot;♀&quot; &quot;♂&quot; &quot;♀&quot; ...</code></pre>
+</div>
+<div class="section level3">
+<h3>個別のベクトルへアクセス</h3>
+<pre class="r"><code>dat$年齢</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code>class(dat$呼び名)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>class(dat$年齢)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>データフレーム内の要素へアクセス</h3>
+<pre class="r"><code>dat[2, 3]</code></pre>
+<pre><code>## [1] &quot;猫&quot;</code></pre>
+<pre class="r"><code>dat[3, ]</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 3    3   くろ 猫    ♂</code></pre>
+<pre class="r"><code>dat[, 3]</code></pre>
+<pre><code>##  [1] &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;犬&quot; &quot;犬&quot; &quot;犬&quot; &quot;犬&quot; &quot;犬&quot;</code></pre>
+<pre class="r"><code>dat[2:3, ]</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 2    2   しろ 猫    ♀
+## 3    3   くろ 猫    ♂</code></pre>
+<pre class="r"><code>dat[1, 2:3]</code></pre>
+<pre><code>##   呼び名 種
+## 1   たま 猫</code></pre>
+<pre class="r"><code>dat[c(2, 4), ]</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 2    2   しろ 猫    ♀
+## 4    4   みけ 猫    ♀</code></pre>
+<pre class="r"><code>dat[, &quot;呼び名&quot;]</code></pre>
+<pre><code>##  [1] &quot;たま&quot; &quot;しろ&quot; &quot;くろ&quot; &quot;みけ&quot; &quot;ぶち&quot; &quot;ぽち&quot; &quot;ころ&quot; NA     &quot;じろ&quot; &quot;わん&quot;</code></pre>
+<pre class="r"><code>dat[, c(&quot;呼び名&quot;, &quot;年齢&quot;)]</code></pre>
+<pre><code>##    呼び名 年齢
+## 1    たま    1
+## 2    しろ    2
+## 3    くろ    3
+## 4    みけ    4
+## 5    ぶち    5
+## 6    ぽち    6
+## 7    ころ    7
+## 8    &lt;NA&gt;    8
+## 9    じろ    9
+## 10   わん   10</code></pre>
+<pre class="r"><code>dat[2, 2] &lt;- &quot;こじろう&quot;  #値を上書き
+dat[is.na(dat$呼び名), ]  #欠損値を含む行</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 8    8   &lt;NA&gt; 犬    ♀</code></pre>
+<pre class="r"><code>dat[dat$年齢 &lt; 5, ]  #年齢が５歳以下のサンプル</code></pre>
+<pre><code>##   年齢   呼び名 種 性別
+## 1    1     たま 猫    ♂
+## 2    2 こじろう 猫    ♀
+## 3    3     くろ 猫    ♂
+## 4    4     みけ 猫    ♀</code></pre>
+<pre class="r"><code>dat[dat$呼び名 %in% c(&quot;ころ&quot;, &quot;じろ&quot;), c(2, 4)]</code></pre>
+<pre><code>##   呼び名 性別
+## 7   ころ    ♂
+## 9   じろ    ♂</code></pre>
+</div>
+<div class="section level3">
+<h3>個別のベクトルを抽出</h3>
+<pre class="r"><code>dat2 &lt;- dat$呼び名
+class(dat2)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>データフレーム内にある個別のベクトルをデータフレームとして抽出</h3>
+<pre class="r"><code>dat2 &lt;- dat[, &quot;呼び名&quot;, drop = FALSE]
+class(dat2)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+</div>

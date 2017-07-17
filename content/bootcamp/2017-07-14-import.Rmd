@@ -9,7 +9,6 @@ image2: "bootcamp/img/cover.jpg"
 weight: 0
 type: ""
 description: "R言語のチュートリアル Part 10: データを読み込む方法"
-
 ---
 
 ```{r setup, include=FALSE}

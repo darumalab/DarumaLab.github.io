@@ -1,0 +1,223 @@
+---
+date: "2017-07-17"
+title: "R言語 行列 - R Matrices"
+author: "斉藤ジョー"
+showonlyimage: false
+draft: false
+image: ""
+image2: "bootcamp/img/cover.jpg"
+weight: 0
+type: ""
+description: "R言語のチュートリアル Part 7: 行列の作成と操作の方法について"
+---
+
+<link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="video-container">
+<iframe class="center_iframe" width="560" height="315" src frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<p>行列に関する Tips 大全 (<a href="http://www.okadajp.org/RWiki/?%E8%A1%8C%E5%88%97Tips%E5%A4%A7%E5%85%A80">http://www.okadajp.org/RWiki/?%E8%A1%8C%E5%88%97Tips%E5%A4%A7%E5%85%A80</a></p>
+<p>matrix: 行列<br />
+row: 行<br />
+column: 列</p>
+<div class="section level3">
+<h3>行列</h3>
+<pre class="r"><code>m1 &lt;- matrix(1:10, nrow = 2)
+m1</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    3    5    7    9
+## [2,]    2    4    6    8   10</code></pre>
+</div>
+<div class="section level3">
+<h3>チェック</h3>
+<pre class="r"><code>length(m1)  #行列の要素の数を調べる</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>nrow(m1)  #行</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>ncol(m1)  #列</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>dim(m1)  #nxm</code></pre>
+<pre><code>## [1] 2 5</code></pre>
+<pre class="r"><code>m2 &lt;- matrix(1:10, nrow = 2, byrow = TRUE)
+m2</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    2    3    4    5
+## [2,]    6    7    8    9   10</code></pre>
+<pre class="r"><code>m3 &lt;- matrix(1:12, nrow = 3, ncol = 4, byrow = TRUE)
+m3</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11   12</code></pre>
+<pre class="r"><code>m4 &lt;- matrix(c(1, 0, 0, 1), nrow = 2, ncol = 2, byrow = TRUE)
+m4</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    0
+## [2,]    0    1</code></pre>
+</div>
+<div id="-rowcolumn" class="section level3">
+<h3>索引: オブジェクト名[row,column]</h3>
+<pre class="r"><code>m3</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11   12</code></pre>
+<pre class="r"><code>m3[2, 3]</code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>m3[3, ]</code></pre>
+<pre><code>## [1]  9 10 11 12</code></pre>
+<pre class="r"><code>m3[, 3]</code></pre>
+<pre><code>## [1]  3  7 11</code></pre>
+<pre class="r"><code>m3[2:3, ]</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    5    6    7    8
+## [2,]    9   10   11   12</code></pre>
+<pre class="r"><code>m3[, 2:3]</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    3
+## [2,]    6    7
+## [3,]   10   11</code></pre>
+<pre class="r"><code>m3[, c(2, 4)]</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    4
+## [2,]    6    8
+## [3,]   10   12</code></pre>
+<pre class="r"><code>m3[c(1, 2), c(3, 4)]</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    3    4
+## [2,]    7    8</code></pre>
+</div>
+<div class="section level3">
+<h3>値を上書き</h3>
+<pre class="r"><code>m3</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11   12</code></pre>
+<pre class="r"><code>m3[3, 4] &lt;- 0
+m3</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11    0</code></pre>
+</div>
+<div class="section level3">
+<h3>名称を付ける</h3>
+<pre class="r"><code>m5 &lt;- matrix(1:4, nrow = 2, ncol = 2, byrow = TRUE)
+m5</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4</code></pre>
+<pre class="r"><code>rownames(m5) &lt;- c(&quot;1st&quot;, &quot;2nd&quot;)
+colnames(m5) &lt;- c(&quot;first&quot;, &quot;second&quot;)
+m5</code></pre>
+<pre><code>##     first second
+## 1st     1      2
+## 2nd     3      4</code></pre>
+<pre class="r"><code>rownames(m5) &lt;- letters[1:2]  #a,b,c,...
+colnames(m5) &lt;- LETTERS[1:2]  #A,B,C,...
+m5</code></pre>
+<pre><code>##   A B
+## a 1 2
+## b 3 4</code></pre>
+</div>
+<div id="-pt1" class="section level3">
+<h3>演算 pt1</h3>
+<pre class="r"><code>m5 + 2</code></pre>
+<pre><code>##   A B
+## a 3 4
+## b 5 6</code></pre>
+<pre class="r"><code>m5 - 2</code></pre>
+<pre><code>##    A B
+## a -1 0
+## b  1 2</code></pre>
+<pre class="r"><code>m5/2</code></pre>
+<pre><code>##     A B
+## a 0.5 1
+## b 1.5 2</code></pre>
+<pre class="r"><code>m5 * 2</code></pre>
+<pre><code>##   A B
+## a 2 4
+## b 6 8</code></pre>
+</div>
+<div id="-pt2" class="section level3">
+<h3>演算 pt2</h3>
+<pre class="r"><code>m6 &lt;- matrix(c(2, 3, 4, 5), nrow = 2, ncol = 2)
+m5</code></pre>
+<pre><code>##   A B
+## a 1 2
+## b 3 4</code></pre>
+<pre class="r"><code>m6</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    4
+## [2,]    3    5</code></pre>
+<pre class="r"><code>m5 + m6</code></pre>
+<pre><code>##   A B
+## a 3 6
+## b 6 9</code></pre>
+<pre class="r"><code>m5 - m6</code></pre>
+<pre><code>##    A  B
+## a -1 -2
+## b  0 -1</code></pre>
+<pre class="r"><code>m5/m6</code></pre>
+<pre><code>##     A   B
+## a 0.5 0.5
+## b 1.0 0.8</code></pre>
+<pre class="r"><code>m5 * m6  #行列の各要素の積</code></pre>
+<pre><code>##   A  B
+## a 2  8
+## b 9 20</code></pre>
+<pre class="r"><code>m5 %*% m6  #行列の積</code></pre>
+<pre><code>##   [,1] [,2]
+## a    8   14
+## b   18   32</code></pre>
+</div>
+<div id="-" class="section level3">
+<h3>転置行列: 行と列の入れ替え</h3>
+<pre class="r"><code>m6</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    4
+## [2,]    3    5</code></pre>
+<pre class="r"><code>m7 &lt;- t(m6)
+m7</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    3
+## [2,]    4    5</code></pre>
+</div>
+<div class="section level3">
+<h3>対角行列</h3>
+<pre class="r"><code>m8 &lt;- diag(nrow = 2, ncol = 2)
+m8</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    0
+## [2,]    0    1</code></pre>
+<pre class="r"><code>m9 &lt;- diag(c(4, 3, 2, 1), nrow = 4, ncol = 4)
+m9</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    4    0    0    0
+## [2,]    0    3    0    0
+## [3,]    0    0    2    0
+## [4,]    0    0    0    1</code></pre>
+</div>
+<div class="section level3">
+<h3>逆行列</h3>
+<pre class="r"><code>m6</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    4
+## [2,]    3    5</code></pre>
+<pre class="r"><code>solve(m6)</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,] -2.5    2
+## [2,]  1.5   -1</code></pre>
+<pre class="r"><code>m6 %*% solve(m6)  #単位行列</code></pre>
+<pre><code>##      [,1]         [,2]
+## [1,]    1 4.440892e-16
+## [2,]    0 1.000000e+00</code></pre>
+</div>
+<div class="section level3">
+<h3>行列式</h3>
+<pre class="r"><code>det(m6)</code></pre>
+<pre><code>## [1] -2</code></pre>
+</div>

@@ -1,6 +1,6 @@
 ---
 date: "2017-07-13"
-title: "R言語 オブジェクト- R Objects"
+title: "R言語 オブジェクト - R Objects"
 author: "斉藤ジョー"
 showonlyimage: false
 draft: false
@@ -27,8 +27,6 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 <div class="video-container">
 <iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/jjkBsU4AChM" frameborder="0" allowfullscreen></iframe>
 </div>
-
-
 
 ###オブジェクトの作成
 ```{r}
