@@ -22,16 +22,16 @@ knitr::opts_chunk$set(echo = TRUE,
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-###オブジェクトとは
 
 <div class="video-container">
-<iframe class="center_iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/Bbd-KBAndFA" frameborder="0" allowfullscreen></iframe>
 </div>
 
+&nbsp;
 
-参考  
-ベクトルに関する Tips 大全  
-http://www.okadajp.org/RWiki/?%E3%83%99%E3%82%AF%E3%83%88%E3%83%ABTips%E5%A4%A7%E5%85%A8
+参考:  
+
+- ベクトルに関する Tips 大全 ^[[ベクトルに関する Tips 大全](http://www.okadajp.org/RWiki/?%E3%83%99%E3%82%AF%E3%83%88%E3%83%ABTips%E5%A4%A7%E5%85%A8)]
 
 ### ベクトルの作成
 ```{r}

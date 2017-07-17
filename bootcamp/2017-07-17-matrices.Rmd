@@ -28,11 +28,17 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 <iframe class="center_iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
 </div>
 
-行列に関する Tips 大全 (http://www.okadajp.org/RWiki/?%E8%A1%8C%E5%88%97Tips%E5%A4%A7%E5%85%A80
+&nbsp;
 
-matrix: 行列  
-row: 行  
-column: 列  
+参考:  
+
+- 行列に関するる Tips 大全 ^[[行列に関するTips 大全](http://www.okadajp.org/RWiki/?%E8%A1%8C%E5%88%97Tips%E5%A4%A7%E5%85%A80)]
+  
+和訳:  
+
+- matrix: 行列  
+- row: 行  
+- column: 列  
 
 ### 行列
 ```{r}
