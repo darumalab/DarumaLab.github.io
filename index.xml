@@ -7,10 +7,65 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2016 Joe Saito</copyright>
-    <lastBuildDate>Sun, 16 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darumalab.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R言語 NA 欠損値 - R Missing Data</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-17-na/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-17-na/</guid>
+      <description>ベクトル x &amp;lt;- NA num &amp;lt;- c(1, 2, 3, NA) str &amp;lt;- c(&amp;quot;dog&amp;quot;, &amp;quot;cat&amp;quot;, NA, &amp;quot;bee&amp;quot;) logi &amp;lt;- c(TRUE, NA, FALSE, TRUE)  データのタイプ mode(num) ## [1] &amp;quot;numeric&amp;quot; mode(str) ## [1] &amp;quot;character&amp;quot; mode(logi) ## [1] &amp;quot;logical&amp;quot;  NA(欠損値)の検出 is.na(num) #または!is.na(num) ## [1] FALSE FALSE FALSE TRUE is.na(str) ## [1] FALSE FALSE TRUE FALSE is.na(logi) ## [1] FALSE TRUE FALSE FALSE  NAのインデックス: which(is.na(num)) #which()でTRUEのインデックスを検出 ## [1] 4 which(is.na(str)) ## [1] 3 which(is.</description>
+    </item>
+    
+    <item>
+      <title>R言語 データフレーム - R Data Frame</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-17-dataframe/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-17-dataframe/</guid>
+      <description>データフレーム Tips 大全(http://www.okadajp.org/RWiki/?%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0Tips%E5%A4%A7%E5%85%A8#t96e2dd9)
+observation, observed value:　観測値
+variable:　変数
+ベクトル a &amp;lt;- 1:10 b &amp;lt;- c(&amp;quot;たま&amp;quot;, &amp;quot;しろ&amp;quot;, &amp;quot;くろ&amp;quot;, &amp;quot;みけ&amp;quot;, &amp;quot;ぶち&amp;quot;, &amp;quot;ぽち&amp;quot;, &amp;quot;ころ&amp;quot;, NA, &amp;quot;じろ&amp;quot;, &amp;quot;わん&amp;quot;) c &amp;lt;- c(&amp;quot;猫&amp;quot;, &amp;quot;猫&amp;quot;, &amp;quot;猫&amp;quot;, &amp;quot;猫&amp;quot;, &amp;quot;猫&amp;quot;, &amp;quot;犬&amp;quot;, &amp;quot;犬&amp;quot;, &amp;quot;犬&amp;quot;, &amp;quot;犬&amp;quot;, &amp;quot;犬&amp;quot;) d &amp;lt;- rep(c(&amp;quot;♂&amp;quot;, &amp;quot;♀&amp;quot;), times = 5)  データフレーム dat &amp;lt;- data.frame(a, b) dat &amp;lt;- data.frame(年齢 = a, 名前 = b) dat &amp;lt;- data.frame(年齢 = a, 名前 = b, 種 = c, 性別 = d, stringsAsFactors = FALSE)  変数の名前 names(dat) ## [1] &amp;quot;年齢&amp;quot; &amp;quot;名前&amp;quot; &amp;quot;種&amp;quot; &amp;quot;性別&amp;quot; names(dat)[2] ## [1] &amp;quot;名前&amp;quot; names(dat)[2] &amp;lt;- &amp;quot;呼び名&amp;quot;  データのチェック head(dat) ## 年齢 呼び名 種 性別 ## 1 1 たま 猫 ♂ ## 2 2 しろ 猫 ♀ ## 3 3 くろ 猫 ♂ ## 4 4 みけ 猫 ♀ ## 5 5 ぶち 猫 ♂ ## 6 6 ぽち 犬 ♀ head(dat, n = 3) #n:行数 ## 年齢 呼び名 種 性別 ## 1 1 たま 猫 ♂ ## 2 2 しろ 猫 ♀ ## 3 3 くろ 猫 ♂ tail(dat) ## 年齢 呼び名 種 性別 ## 5 5 ぶち 猫 ♂ ## 6 6 ぽち 犬 ♀ ## 7 7 ころ 犬 ♂ ## 8 8 &amp;lt;NA&amp;gt; 犬 ♀ ## 9 9 じろ 犬 ♂ ## 10 10 わん 犬 ♀ tail(dat, n = 3) ## 年齢 呼び名 種 性別 ## 8 8 &amp;lt;NA&amp;gt; 犬 ♀ ## 9 9 じろ 犬 ♂ ## 10 10 わん 犬 ♀  データのタイプをチェック class(dat) ## [1] &amp;quot;data.</description>
+    </item>
+    
+    <item>
+      <title>R言語 ベクトル - R Vectors</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-17-vectors/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-17-vectors/</guid>
+      <description>オブジェクトとは   参考
+ベクトルに関する Tips 大全
+http://www.okadajp.org/RWiki/?%E3%83%99%E3%82%AF%E3%83%88%E3%83%ABTips%E5%A4%A7%E5%85%A8
+ ベクトルの作成 a &amp;lt;- c(1, 2, 3, 4, 5) a ## [1] 1 2 3 4 5 b &amp;lt;- c(&amp;quot;dog&amp;quot;, &amp;quot;cat&amp;quot;, &amp;quot;bee&amp;quot;) b ## [1] &amp;quot;dog&amp;quot; &amp;quot;cat&amp;quot; &amp;quot;bee&amp;quot; c &amp;lt;- c(TRUE, FALSE, TRUE) c ## [1] TRUE FALSE TRUE x &amp;lt;- 1:5 x ## [1] 1 2 3 4 5 y &amp;lt;- 5:1 y ## [1] 5 4 3 2 1 z &amp;lt;- -5:5 z ## [1] -5 -4 -3 -2 -1 0 1 2 3 4 5  seq() - sequence: 数列 seq(from = 1, to = 5, by = 1) ## [1] 1 2 3 4 5 seq(from = 1, to = 5, by = 0.</description>
+    </item>
+    
+    <item>
+      <title>R言語 リスト - R Lists</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-17-lists/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-17-lists/</guid>
+      <description>リストの作成 MyList &amp;lt;- list(1:5, c(&amp;quot;dog&amp;quot;, &amp;quot;cat&amp;quot;, &amp;quot;bee&amp;quot;), c(TRUE, FALSE)) MyList ## [[1]] ## [1] 1 2 3 4 5 ## ## [[2]] ## [1] &amp;quot;dog&amp;quot; &amp;quot;cat&amp;quot; &amp;quot;bee&amp;quot; ## ## [[3]] ## [1] TRUE FALSE str(MyList) ## List of 3 ## $ : int [1:5] 1 2 3 4 5 ## $ : chr [1:3] &amp;quot;dog&amp;quot; &amp;quot;cat&amp;quot; &amp;quot;bee&amp;quot; ## $ : logi [1:2] TRUE FALSE a &amp;lt;- 1:3 b &amp;lt;- c(&amp;quot;dog&amp;quot;, &amp;quot;cat&amp;quot;, NA) c &amp;lt;- c(TRUE, TRUE, FALSE) d &amp;lt;- data.</description>
+    </item>
+    
+    <item>
+      <title>R言語 行列 - R Matrices</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-17-matrices/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-17-matrices/</guid>
+      <description>行列に関する Tips 大全 (http://www.okadajp.org/RWiki/?%E8%A1%8C%E5%88%97Tips%E5%A4%A7%E5%85%A80
+matrix: 行列
+row: 行
+column: 列
+行列 m1 &amp;lt;- matrix(1:10, nrow = 2) m1 ## [,1] [,2] [,3] [,4] [,5] ## [1,] 1 3 5 7 9 ## [2,] 2 4 6 8 10  チェック length(m1) #行列の要素の数を調べる ## [1] 10 nrow(m1) #行 ## [1] 2 ncol(m1) #列 ## [1] 5 dim(m1) #nxm ## [1] 2 5 m2 &amp;lt;- matrix(1:10, nrow = 2, byrow = TRUE) m2 ## [,1] [,2] [,3] [,4] [,5] ## [1,] 1 2 3 4 5 ## [2,] 6 7 8 9 10 m3 &amp;lt;- matrix(1:12, nrow = 3, ncol = 4, byrow = TRUE) m3 ## [,1] [,2] [,3] [,4] ## [1,] 1 2 3 4 ## [2,] 5 6 7 8 ## [3,] 9 10 11 12 m4 &amp;lt;- matrix(c(1, 0, 0, 1), nrow = 2, ncol = 2, byrow = TRUE) m4 ## [,1] [,2] ## [1,] 1 0 ## [2,] 0 1  索引: オブジェクト名[row,column] m3 ## [,1] [,2] [,3] [,4] ## [1,] 1 2 3 4 ## [2,] 5 6 7 8 ## [3,] 9 10 11 12 m3[2, 3] ## [1] 7 m3[3, ] ## [1] 9 10 11 12 m3[, 3] ## [1] 3 7 11 m3[2:3, ] ## [,1] [,2] [,3] [,4] ## [1,] 5 6 7 8 ## [2,] 9 10 11 12 m3[, 2:3] ## [,1] [,2] ## [1,] 2 3 ## [2,] 6 7 ## [3,] 10 11 m3[, c(2, 4)] ## [,1] [,2] ## [1,] 2 4 ## [2,] 6 8 ## [3,] 10 12 m3[c(1, 2), c(3, 4)] ## [,1] [,2] ## [1,] 3 4 ## [2,] 7 8  値を上書き m3 ## [,1] [,2] [,3] [,4] ## [1,] 1 2 3 4 ## [2,] 5 6 7 8 ## [3,] 9 10 11 12 m3[3, 4] &amp;lt;- 0 m3 ## [,1] [,2] [,3] [,4] ## [1,] 1 2 3 4 ## [2,] 5 6 7 8 ## [3,] 9 10 11 0  名称を付ける m5 &amp;lt;- matrix(1:4, nrow = 2, ncol = 2, byrow = TRUE) m5 ## [,1] [,2] ## [1,] 1 2 ## [2,] 3 4 rownames(m5) &amp;lt;- c(&amp;quot;1st&amp;quot;, &amp;quot;2nd&amp;quot;) colnames(m5) &amp;lt;- c(&amp;quot;first&amp;quot;, &amp;quot;second&amp;quot;) m5 ## first second ## 1st 1 2 ## 2nd 3 4 rownames(m5) &amp;lt;- letters[1:2] #a,b,c,.</description>
+    </item>
     
     <item>
       <title>Rプログラミングと統計</title>
@@ -18,10 +73,14 @@
       <pubDate>Sun, 16 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/bootcamp/2017-07-16-tutorials/</guid>
-      <description> Part 3: R言語 オブジェクト - R Objects
-オブジェクトの基本的な扱い方  Part 10: R言語 データのタイプ - R Data Types
-Rでよく使われるデータのタイプ  Part 10: R言語 データの読み込み - R Importing Data
-エクセル等のデータの読み込み方 </description>
+      <description>Part 3: R言語 オブジェクト - R Objects
+オブジェクトの基本的な扱い方  Part 4: R言語 データのタイプ - R Data Types
+Rでよく使われるデータのタイプ  Part 5: R言語 ベクトルの扱い方 - R Vectors
+ベクトルの作成と基本的な操作について  Part 6: R言語 NA 欠損値 - R Missing Data
+欠損値の扱い方について  Part 7: R言語 行列 - R Matrices
+行列の作成と操作について  Part 8: R言語 データフレーム - R Data Frame
+データフレームの作成と操作について  Part 9: R言語 リスト - R Lists
+リストの作成と操作について  Part 10: R言語 データの読み込み - R Importing Data</description>
     </item>
     
     <item>
@@ -34,7 +93,7 @@ Rでよく使われるデータのタイプ  Part 10: R言語 データの読み
     </item>
     
     <item>
-      <title>R言語 オブジェクト- R Objects</title>
+      <title>R言語 オブジェクト - R Objects</title>
       <link>https://darumalab.github.io/bootcamp/2017-07-13-objects/</link>
       <pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate>
       
@@ -49,6 +108,18 @@ Rでよく使われるデータのタイプ  Part 10: R言語 データの読み
       
       <guid>https://darumalab.github.io/bootcamp/2017-07-17-type/</guid>
       <description>数値データ num &amp;lt;- 7  オブジェクトが数値データなのかチェック is.numeric(num) ## [1] TRUE class(num) ## [1] &amp;quot;numeric&amp;quot;  オブジェクトが整数なのかチェック is.integer(num) ## [1] FALSE num2 &amp;lt;- 7L is.integer(num2) ## [1] TRUE  文字列データ char &amp;lt;- &amp;quot;テキスト&amp;quot; char2 &amp;lt;- factor(&amp;quot;テキスト&amp;quot;) #文字列をファクターとして保存  オブジェクトが文字列データなのかチェック is.character(char) ## [1] TRUE class(char) ## [1] &amp;quot;character&amp;quot;  論理データ logi &amp;lt;- TRUE logi2 &amp;lt;- FALSE logi3 &amp;lt;- NA  オブジェクトが論理データなのかチェック is.logical(logi) ## [1] TRUE  日付データ date &amp;lt;- as.Date(&amp;quot;YYYY-MM-DD&amp;quot;) #例:2017-04-15 date2 &amp;lt;- as.</description>
+    </item>
+    
+    <item>
+      <title>R言語 ベクトル - R Vectors</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-17vectors/</link>
+      <pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-17vectors/</guid>
+      <description>オブジェクトとは   参考
+ベクトルに関する Tips 大全
+http://www.okadajp.org/RWiki/?%E3%83%99%E3%82%AF%E3%83%88%E3%83%ABTips%E5%A4%A7%E5%85%A8
+ ベクトルの作成 a &amp;lt;- c(1, 2, 3, 4, 5) a ## [1] 1 2 3 4 5 b &amp;lt;- c(&amp;quot;dog&amp;quot;, &amp;quot;cat&amp;quot;, &amp;quot;bee&amp;quot;) b ## [1] &amp;quot;dog&amp;quot; &amp;quot;cat&amp;quot; &amp;quot;bee&amp;quot; c &amp;lt;- c(TRUE, FALSE, TRUE) c ## [1] TRUE FALSE TRUE x &amp;lt;- 1:5 x ## [1] 1 2 3 4 5 y &amp;lt;- 5:1 y ## [1] 5 4 3 2 1 z &amp;lt;- -5:5 z ## [1] -5 -4 -3 -2 -1 0 1 2 3 4 5  seq() - sequence: 数列 `?</description>
     </item>
     
     <item>

@@ -2,18 +2,18 @@
 <html lang="ja">
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>R言語 オブジェクト - R Objects</title>
+<title>R言語 ベクトル - R Vectors</title>
 <meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
-<meta name="description" content="R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。"/>
-<meta property="og:title" content="R言語 オブジェクト - R Objects - ベイカー・ストリート">
+<meta name="description" content="R言語のチュートリアル Part 5: ベクトルの作成と基本的な操作について"/>
+<meta property="og:title" content="R言語 ベクトル - R Vectors - ベイカー・ストリート">
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://darumalab.github.io/bootcamp/2017-07-13-objects/" />
-<meta property="og:description" content="R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。">
+<meta property="og:url" content="https://darumalab.github.io/bootcamp/2017-07-17-vectors/" />
+<meta property="og:description" content="R言語のチュートリアル Part 5: ベクトルの作成と基本的な操作について">
 <meta property="og:site_name" content="ベイカー・ストリート" />
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://darumalab.github.io/img/icon/top_icon_bigger.jpg" />
 
-<meta property="article:published_time" content="2017-07-13 00:00:00 &#43;0000 UTC" />
+<meta property="article:published_time" content="2017-07-17 00:00:00 &#43;0000 UTC" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
@@ -26,13 +26,13 @@
         { 
           "@context": "http://schema.org", 
           "@type": "WebSite", 
-          "url": "https://darumalab.github.io/bootcamp/2017-07-13-objects/", 
-          "name": "R言語 オブジェクト - R Objects",
+          "url": "https://darumalab.github.io/bootcamp/2017-07-17-vectors/", 
+          "name": "R言語 ベクトル - R Vectors",
            "author": {
               "@type": "Person",
               "name": "斉藤ジョー"
             },
-          "description": "R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。",
+          "description": "R言語のチュートリアル Part 5: ベクトルの作成と基本的な操作について",
         }
         </script>
         
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="https://darumalab.github.io/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.carousel.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.theme.css">
-<link rel="canonical" href="https://darumalab.github.io/bootcamp/2017-07-13-objects/" />
+<link rel="canonical" href="https://darumalab.github.io/bootcamp/2017-07-17-vectors/" />
 <link rel="author" href="https://plus.google.com/u/1/110782802254248820154"/>
 <link rel="stylesheet" href="https://darumalab.github.io/css/highlight.css">
 <script src="https://darumalab.github.io/js/highlight.pack.js"></script>
@@ -162,54 +162,120 @@ ga('send', 'pageview');
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
-         <h1>R言語 オブジェクト - R Objects</h1>
+         <h1>R言語 ベクトル - R Vectors</h1>
          <link href="https://darumalab.github.io/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
 <div class="section level3">
 <h3>オブジェクトとは</h3>
 <div class="video-container">
-<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/jjkBsU4AChM" frameborder="0" allowfullscreen>
+<iframe class="center_iframe" width="560" height="315" src frameborder="0" allowfullscreen>
 </iframe>
 </div>
+<p>参考<br />
+ベクトルに関する Tips 大全<br />
+<a href="http://www.okadajp.org/RWiki/?%E3%83%99%E3%82%AF%E3%83%88%E3%83%ABTips%E5%A4%A7%E5%85%A8">http://www.okadajp.org/RWiki/?%E3%83%99%E3%82%AF%E3%83%88%E3%83%ABTips%E5%A4%A7%E5%85%A8</a></p>
 </div>
 <div class="section level3">
-<h3>オブジェクトの作成</h3>
-<pre class="r"><code>x &lt;- 2 + 2
+<h3>ベクトルの作成</h3>
+<pre class="r"><code>a &lt;- c(1, 2, 3, 4, 5)
+a</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>b &lt;- c(&quot;dog&quot;, &quot;cat&quot;, &quot;bee&quot;)
+b</code></pre>
+<pre><code>## [1] &quot;dog&quot; &quot;cat&quot; &quot;bee&quot;</code></pre>
+<pre class="r"><code>c &lt;- c(TRUE, FALSE, TRUE)
+c</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+<pre class="r"><code>x &lt;- 1:5
 x</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code>y &lt;- 5 * 5
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>y &lt;- 5:1
 y</code></pre>
-<pre><code>## [1] 25</code></pre>
-<pre class="r"><code>myname &lt;- &quot;Joe&quot;
-myname</code></pre>
-<pre><code>## [1] &quot;Joe&quot;</code></pre>
+<pre><code>## [1] 5 4 3 2 1</code></pre>
+<pre class="r"><code>z &lt;- -5:5
+z</code></pre>
+<pre><code>##  [1] -5 -4 -3 -2 -1  0  1  2  3  4  5</code></pre>
+</div>
+<div id="seq---sequence-" class="section level3">
+<h3>seq() - sequence: 数列</h3>
+<pre class="r"><code>seq(from = 1, to = 5, by = 1)</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>seq(from = 1, to = 5, by = 0.5)</code></pre>
+<pre><code>## [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0</code></pre>
+<pre class="r"><code>seq(from = 1, to = 5, by = 1/2)</code></pre>
+<pre><code>## [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0</code></pre>
+</div>
+<div id="rep---replicate-" class="section level3">
+<h3>rep() - replicate: 複製する</h3>
+<pre class="r"><code>rep(1, times = 5)</code></pre>
+<pre><code>## [1] 1 1 1 1 1</code></pre>
+<pre class="r"><code>rep(c(1, 3, 5), times = 5)</code></pre>
+<pre><code>##  [1] 1 3 5 1 3 5 1 3 5 1 3 5 1 3 5</code></pre>
+<pre class="r"><code>rep(&quot;dog&quot;, times = 5)</code></pre>
+<pre><code>## [1] &quot;dog&quot; &quot;dog&quot; &quot;dog&quot; &quot;dog&quot; &quot;dog&quot;</code></pre>
+<pre class="r"><code>rep(c(&quot;dog&quot;, &quot;cat&quot;), times = 5)</code></pre>
+<pre><code>##  [1] &quot;dog&quot; &quot;cat&quot; &quot;dog&quot; &quot;cat&quot; &quot;dog&quot; &quot;cat&quot; &quot;dog&quot; &quot;cat&quot; &quot;dog&quot; &quot;cat&quot;</code></pre>
+<pre class="r"><code>rep(TRUE, times = 5)</code></pre>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+<pre class="r"><code>rep(c(FALSE, TRUE), times = 5)</code></pre>
+<pre><code>##  [1] FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE</code></pre>
 </div>
 <div class="section level3">
-<h3>作成したオブジェクト名を確認</h3>
-<pre class="r"><code>objects()</code></pre>
-<pre><code>## [1] &quot;myname&quot; &quot;x&quot;      &quot;y&quot;</code></pre>
-<pre class="r"><code>ls()</code></pre>
-<pre><code>## [1] &quot;myname&quot; &quot;x&quot;      &quot;y&quot;</code></pre>
+<h3>ベクトルの要素の数を調べる</h3>
+<pre class="r"><code>length(x)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>length(rep(1, times = 3))</code></pre>
+<pre><code>## [1] 3</code></pre>
 </div>
 <div class="section level3">
-<h3>ワーキングディレクトリ</h3>
-<pre class="r"><code>getwd()  #確認
-setwd(&quot;ディレクトリ名&quot;)  #変更</code></pre>
+<h3>ベクトルの要素にアクセスする</h3>
+<pre class="r"><code>y[2]</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>y[c(1, 3)]  #c()で複数の要素にアクセス</code></pre>
+<pre><code>## [1] 5 3</code></pre>
+<pre class="r"><code>y[-c(1, 3)]  #-c()で複数の要素を取り除く</code></pre>
+<pre><code>## [1] 4 2 1</code></pre>
+<pre class="r"><code>y[y &lt; 4]</code></pre>
+<pre><code>## [1] 3 2 1</code></pre>
 </div>
-<div class="section level3">
-<h3>オブジェクトの保存</h3>
-<pre class="r"><code>save(x, y, myname, file = &quot;ファイル名.RData&quot;)  #x,y,mynameを保存</code></pre>
+<div id="-pt1" class="section level3">
+<h3>演算 pt1</h3>
+<pre class="r"><code>z + 2</code></pre>
+<pre><code>##  [1] -3 -2 -1  0  1  2  3  4  5  6  7</code></pre>
+<pre class="r"><code>z - 2</code></pre>
+<pre><code>##  [1] -7 -6 -5 -4 -3 -2 -1  0  1  2  3</code></pre>
+<pre class="r"><code>z * 2</code></pre>
+<pre><code>##  [1] -10  -8  -6  -4  -2   0   2   4   6   8  10</code></pre>
+<pre class="r"><code>z/2</code></pre>
+<pre><code>##  [1] -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5</code></pre>
+<pre class="r"><code>z^2</code></pre>
+<pre><code>##  [1] 25 16  9  4  1  0  1  4  9 16 25</code></pre>
+<pre class="r"><code>sqrt(z)  #平方根</code></pre>
+<pre><code>## Warning in sqrt(z): NaNs produced</code></pre>
+<pre><code>##  [1]      NaN      NaN      NaN      NaN      NaN 0.000000 1.000000
+##  [8] 1.414214 1.732051 2.000000 2.236068</code></pre>
+<pre class="r"><code>x1 &lt;- c(1, 3, 5)
+y1 &lt;- c(2, 4, 6)
+x1 + y1</code></pre>
+<pre><code>## [1]  3  7 11</code></pre>
+<pre class="r"><code>x1 - y1</code></pre>
+<pre><code>## [1] -1 -1 -1</code></pre>
+<pre class="r"><code>x1 * y1</code></pre>
+<pre><code>## [1]  2 12 30</code></pre>
+<pre class="r"><code>x1/y1</code></pre>
+<pre><code>## [1] 0.5000000 0.7500000 0.8333333</code></pre>
 </div>
-<div class="section level3">
-<h3>オブジェクトの読み込み</h3>
-<pre class="r"><code>load(&quot;ファイル名.RData&quot;)</code></pre>
-</div>
-<div class="section level3">
-<h3>オブジェクトの削除</h3>
-<pre class="r"><code>rm(x)  #xを削除
-rm(x, y)  #x,y,mynameを削除
-rm(list = objects())  #全て削除</code></pre>
+<div id="-pt2" class="section level3">
+<h3>演算 pt2</h3>
+<pre class="r"><code># 要素の数（長さ）の違うベクトルでは、
+# 長いベクトルに合わせて短いベクトルが再利用される
+x2 &lt;- c(1, 3, 5)
+z2 &lt;- c(1, 2, 3, 4, 5, 6)
+z2 + x2</code></pre>
+<pre><code>## [1]  2  5  8  5  8 11</code></pre>
+<pre class="r"><code>z2 - x2</code></pre>
+<pre><code>## [1]  0 -1 -2  3  2  1</code></pre>
 </div>
 
          

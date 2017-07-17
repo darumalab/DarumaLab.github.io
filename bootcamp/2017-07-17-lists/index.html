@@ -2,18 +2,18 @@
 <html lang="ja">
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>R言語 オブジェクト - R Objects</title>
+<title>R言語 リスト - R Lists</title>
 <meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
-<meta name="description" content="R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。"/>
-<meta property="og:title" content="R言語 オブジェクト - R Objects - ベイカー・ストリート">
+<meta name="description" content="R言語のチュートリアル Part 9: リストの扱い方について"/>
+<meta property="og:title" content="R言語 リスト - R Lists - ベイカー・ストリート">
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://darumalab.github.io/bootcamp/2017-07-13-objects/" />
-<meta property="og:description" content="R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。">
+<meta property="og:url" content="https://darumalab.github.io/bootcamp/2017-07-17-lists/" />
+<meta property="og:description" content="R言語のチュートリアル Part 9: リストの扱い方について">
 <meta property="og:site_name" content="ベイカー・ストリート" />
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://darumalab.github.io/img/icon/top_icon_bigger.jpg" />
 
-<meta property="article:published_time" content="2017-07-13 00:00:00 &#43;0000 UTC" />
+<meta property="article:published_time" content="2017-07-17 00:00:00 &#43;0000 UTC" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
@@ -26,13 +26,13 @@
         { 
           "@context": "http://schema.org", 
           "@type": "WebSite", 
-          "url": "https://darumalab.github.io/bootcamp/2017-07-13-objects/", 
-          "name": "R言語 オブジェクト - R Objects",
+          "url": "https://darumalab.github.io/bootcamp/2017-07-17-lists/", 
+          "name": "R言語 リスト - R Lists",
            "author": {
               "@type": "Person",
               "name": "斉藤ジョー"
             },
-          "description": "R言語のチュートリアル Part 3: オブジェクトの基本的な扱い方について話しています。",
+          "description": "R言語のチュートリアル Part 9: リストの扱い方について",
         }
         </script>
         
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="https://darumalab.github.io/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.carousel.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.theme.css">
-<link rel="canonical" href="https://darumalab.github.io/bootcamp/2017-07-13-objects/" />
+<link rel="canonical" href="https://darumalab.github.io/bootcamp/2017-07-17-lists/" />
 <link rel="author" href="https://plus.google.com/u/1/110782802254248820154"/>
 <link rel="stylesheet" href="https://darumalab.github.io/css/highlight.css">
 <script src="https://darumalab.github.io/js/highlight.pack.js"></script>
@@ -162,54 +162,121 @@ ga('send', 'pageview');
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
-         <h1>R言語 オブジェクト - R Objects</h1>
+         <h1>R言語 リスト - R Lists</h1>
          <link href="https://darumalab.github.io/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<div class="section level3">
-<h3>オブジェクトとは</h3>
 <div class="video-container">
-<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/jjkBsU4AChM" frameborder="0" allowfullscreen>
+<iframe class="center_iframe" width="560" height="315" src frameborder="0" allowfullscreen>
 </iframe>
 </div>
+<div class="section level3">
+<h3>リストの作成</h3>
+<pre class="r"><code>MyList &lt;- list(1:5, c(&quot;dog&quot;, &quot;cat&quot;, &quot;bee&quot;), c(TRUE, FALSE))
+MyList</code></pre>
+<pre><code>## [[1]]
+## [1] 1 2 3 4 5
+## 
+## [[2]]
+## [1] &quot;dog&quot; &quot;cat&quot; &quot;bee&quot;
+## 
+## [[3]]
+## [1]  TRUE FALSE</code></pre>
+<pre class="r"><code>str(MyList)</code></pre>
+<pre><code>## List of 3
+##  $ : int [1:5] 1 2 3 4 5
+##  $ : chr [1:3] &quot;dog&quot; &quot;cat&quot; &quot;bee&quot;
+##  $ : logi [1:2] TRUE FALSE</code></pre>
+<pre class="r"><code>a &lt;- 1:3
+b &lt;- c(&quot;dog&quot;, &quot;cat&quot;, NA)
+c &lt;- c(TRUE, TRUE, FALSE)
+d &lt;- data.frame(a, b, c)
+MyList2 &lt;- list(a, b, c, d)
+MyList2</code></pre>
+<pre><code>## [[1]]
+## [1] 1 2 3
+## 
+## [[2]]
+## [1] &quot;dog&quot; &quot;cat&quot; NA   
+## 
+## [[3]]
+## [1]  TRUE  TRUE FALSE
+## 
+## [[4]]
+##   a    b     c
+## 1 1  dog  TRUE
+## 2 2  cat  TRUE
+## 3 3 &lt;NA&gt; FALSE</code></pre>
+<pre class="r"><code>str(MyList2)</code></pre>
+<pre><code>## List of 4
+##  $ : int [1:3] 1 2 3
+##  $ : chr [1:3] &quot;dog&quot; &quot;cat&quot; NA
+##  $ : logi [1:3] TRUE TRUE FALSE
+##  $ :&#39;data.frame&#39;:    3 obs. of  3 variables:
+##   ..$ a: int [1:3] 1 2 3
+##   ..$ b: Factor w/ 2 levels &quot;cat&quot;,&quot;dog&quot;: 2 1 NA
+##   ..$ c: logi [1:3] TRUE TRUE FALSE</code></pre>
 </div>
 <div class="section level3">
-<h3>オブジェクトの作成</h3>
-<pre class="r"><code>x &lt;- 2 + 2
-x</code></pre>
-<pre><code>## [1] 4</code></pre>
-<pre class="r"><code>y &lt;- 5 * 5
-y</code></pre>
-<pre><code>## [1] 25</code></pre>
-<pre class="r"><code>myname &lt;- &quot;Joe&quot;
-myname</code></pre>
-<pre><code>## [1] &quot;Joe&quot;</code></pre>
+<h3>リストの名前</h3>
+<pre class="r"><code>names(MyList2)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>MyList2 &lt;- list(first = a, second = b, third = c, forth = d)
+names(MyList2) &lt;- c(&quot;first&quot;, &quot;second&quot;, &quot;third&quot;, &quot;forth&quot;)
+str(MyList2)</code></pre>
+<pre><code>## List of 4
+##  $ first : int [1:3] 1 2 3
+##  $ second: chr [1:3] &quot;dog&quot; &quot;cat&quot; NA
+##  $ third : logi [1:3] TRUE TRUE FALSE
+##  $ forth :&#39;data.frame&#39;:  3 obs. of  3 variables:
+##   ..$ a: int [1:3] 1 2 3
+##   ..$ b: Factor w/ 2 levels &quot;cat&quot;,&quot;dog&quot;: 2 1 NA
+##   ..$ c: logi [1:3] TRUE TRUE FALSE</code></pre>
+<pre class="r"><code>MyList2</code></pre>
+<pre><code>## $first
+## [1] 1 2 3
+## 
+## $second
+## [1] &quot;dog&quot; &quot;cat&quot; NA   
+## 
+## $third
+## [1]  TRUE  TRUE FALSE
+## 
+## $forth
+##   a    b     c
+## 1 1  dog  TRUE
+## 2 2  cat  TRUE
+## 3 3 &lt;NA&gt; FALSE</code></pre>
 </div>
 <div class="section level3">
-<h3>作成したオブジェクト名を確認</h3>
-<pre class="r"><code>objects()</code></pre>
-<pre><code>## [1] &quot;myname&quot; &quot;x&quot;      &quot;y&quot;</code></pre>
-<pre class="r"><code>ls()</code></pre>
-<pre><code>## [1] &quot;myname&quot; &quot;x&quot;      &quot;y&quot;</code></pre>
+<h3>　リストの成分へアクセス</h3>
+<pre class="r"><code>MyList2$first</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<pre class="r"><code>MyList2$second</code></pre>
+<pre><code>## [1] &quot;dog&quot; &quot;cat&quot; NA</code></pre>
+<pre class="r"><code>MyList2[[1]]</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<pre class="r"><code>MyList2[[2]]</code></pre>
+<pre><code>## [1] &quot;dog&quot; &quot;cat&quot; NA</code></pre>
+<pre class="r"><code>MyList2[[&quot;first&quot;]]</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<pre class="r"><code>MyList2[[&quot;second&quot;]]</code></pre>
+<pre><code>## [1] &quot;dog&quot; &quot;cat&quot; NA</code></pre>
+<pre class="r"><code>MyList2$first[2]</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>MyList2[[2]][2:3]</code></pre>
+<pre><code>## [1] &quot;cat&quot; NA</code></pre>
+<pre class="r"><code>MyList2[[&quot;second&quot;]][c(1, 2)]</code></pre>
+<pre><code>## [1] &quot;dog&quot; &quot;cat&quot;</code></pre>
+<pre class="r"><code>MyList2$first[2] &lt;- 99</code></pre>
 </div>
 <div class="section level3">
-<h3>ワーキングディレクトリ</h3>
-<pre class="r"><code>getwd()  #確認
-setwd(&quot;ディレクトリ名&quot;)  #変更</code></pre>
+<h3>リストに新しい成分を加える</h3>
+<pre class="r"><code>MyList2[[5]] &lt;- 1:10</code></pre>
 </div>
 <div class="section level3">
-<h3>オブジェクトの保存</h3>
-<pre class="r"><code>save(x, y, myname, file = &quot;ファイル名.RData&quot;)  #x,y,mynameを保存</code></pre>
-</div>
-<div class="section level3">
-<h3>オブジェクトの読み込み</h3>
-<pre class="r"><code>load(&quot;ファイル名.RData&quot;)</code></pre>
-</div>
-<div class="section level3">
-<h3>オブジェクトの削除</h3>
-<pre class="r"><code>rm(x)  #xを削除
-rm(x, y)  #x,y,mynameを削除
-rm(list = objects())  #全て削除</code></pre>
+<h3>リストの成分削除</h3>
+<pre class="r"><code>MyList2[[5]] &lt;- NULL</code></pre>
 </div>
 
          

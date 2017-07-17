@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>R言語 データフレーム - R Data Frame</title>
+<meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
+<meta name="description" content="R言語のチュートリアル Part 8: データフレームの扱い方について"/>
+<meta property="og:title" content="R言語 データフレーム - R Data Frame - ベイカー・ストリート">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darumalab.github.io/bootcamp/2017-07-17-dataframe/" />
+<meta property="og:description" content="R言語のチュートリアル Part 8: データフレームの扱い方について">
+<meta property="og:site_name" content="ベイカー・ストリート" />
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://darumalab.github.io/img/icon/top_icon_bigger.jpg" />
+
+<meta property="article:published_time" content="2017-07-17 00:00:00 &#43;0000 UTC" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+
+  
+    
+    
+        <script type="application/ld+json">
+        
+        { 
+          "@context": "http://schema.org", 
+          "@type": "WebSite", 
+          "url": "https://darumalab.github.io/bootcamp/2017-07-17-dataframe/", 
+          "name": "R言語 データフレーム - R Data Frame",
+           "author": {
+              "@type": "Person",
+              "name": "斉藤ジョー"
+            },
+          "description": "R言語のチュートリアル Part 8: データフレームの扱い方について",
+        }
+        </script>
+        
+    
+
+<link rel="stylesheet" href="https://darumalab.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://darumalab.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://darumalab.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://darumalab.github.io/css/owl.theme.css">
+<link rel="canonical" href="https://darumalab.github.io/bootcamp/2017-07-17-dataframe/" />
+<link rel="author" href="https://plus.google.com/u/1/110782802254248820154"/>
+<link rel="stylesheet" href="https://darumalab.github.io/css/highlight.css">
+<script src="https://darumalab.github.io/js/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+<link href="https://darumalab.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://darumalab.github.io/img/icon/topicon.jpg">
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-101594477-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://darumalab.github.io/"><B>ベイカー・ストリート</B></a></h1>
+
+    <a href="https://darumalab.github.io/"><img style="max-width: 150px; height: auto;" src="https://darumalab.github.io/img/icon/top_icon_bigger.jpg"/></a>
+
+    
+      <p class="sidebar-p"></p>
+    
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="https://darumalab.github.io/">Home</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a href="mailto:datadaruma@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  
+  <a href="https://www.youtube.com/channel/UC7aVZqDYKM2fJAGioTiJCxQ" data-animate-hover="pulse">
+    <i class="fa fa-youtube"></i>
+  </a>
+  
+  
+  <a href="https://darumalab.github.io/index.xml" data-animate-hover="pulse">
+    <i class="fa fa-rss"></i>
+  </a>
+  
+</p>
+
+
+
+    
+    <section class="sidebar">
+      <header>Categories</header>
+      <div>
+        <ul class="terms">
+          <li><a href="https://darumalab.github.io/categories/r%E8%A8%80%E8%AA%9E">r言語</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="sidebar">
+      <header>Tags</header>
+      <div>
+        <ul class="terms">
+          <li><a href="https://darumalab.github.io/tags/charts">charts</a></li><li><a href="https://darumalab.github.io/tags/linear">linear</a></li><li><a href="https://darumalab.github.io/tags/log">log</a></li><li><a href="https://darumalab.github.io/tags/%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88">チャート</a></li><li><a href="https://darumalab.github.io/tags/%E5%AF%BE%E6%95%B0">対数</a></li><li><a href="https://darumalab.github.io/tags/%E7%B7%9A%E5%BD%A2">線形</a></li>
+        </ul>
+      </div>
+    </section>
+    
+</br>
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2016 Joe Saito
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a> | Illustration by <a href="https://twitter.com/circulo__">nomada</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://darumalab.github.io/">ベイカー・ストリート</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>R言語 データフレーム - R Data Frame</h1>
+         <link href="https://darumalab.github.io/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="video-container">
+<iframe class="center_iframe" width="560" height="315" src frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<p>データフレーム Tips 大全(<a href="http://www.okadajp.org/RWiki/?%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0Tips%E5%A4%A7%E5%85%A8#t96e2dd9">http://www.okadajp.org/RWiki/?%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0Tips%E5%A4%A7%E5%85%A8#t96e2dd9</a>)</p>
+<p>observation, observed value:　観測値<br />
+variable:　変数</p>
+<div class="section level3">
+<h3>ベクトル</h3>
+<pre class="r"><code>a &lt;- 1:10
+b &lt;- c(&quot;たま&quot;, &quot;しろ&quot;, &quot;くろ&quot;, &quot;みけ&quot;, &quot;ぶち&quot;, &quot;ぽち&quot;, 
+    &quot;ころ&quot;, NA, &quot;じろ&quot;, &quot;わん&quot;)
+c &lt;- c(&quot;猫&quot;, &quot;猫&quot;, &quot;猫&quot;, &quot;猫&quot;, &quot;猫&quot;, &quot;犬&quot;, &quot;犬&quot;, &quot;犬&quot;, 
+    &quot;犬&quot;, &quot;犬&quot;)
+d &lt;- rep(c(&quot;♂&quot;, &quot;♀&quot;), times = 5)</code></pre>
+</div>
+<div class="section level3">
+<h3>データフレーム</h3>
+<pre class="r"><code>dat &lt;- data.frame(a, b)
+dat &lt;- data.frame(年齢 = a, 名前 = b)
+dat &lt;- data.frame(年齢 = a, 名前 = b, 種 = c, 性別 = d, 
+    stringsAsFactors = FALSE)</code></pre>
+</div>
+<div class="section level3">
+<h3>変数の名前</h3>
+<pre class="r"><code>names(dat)</code></pre>
+<pre><code>## [1] &quot;年齢&quot; &quot;名前&quot; &quot;種&quot;   &quot;性別&quot;</code></pre>
+<pre class="r"><code>names(dat)[2]</code></pre>
+<pre><code>## [1] &quot;名前&quot;</code></pre>
+<pre class="r"><code>names(dat)[2] &lt;- &quot;呼び名&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>データのチェック</h3>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 1    1   たま 猫    ♂
+## 2    2   しろ 猫    ♀
+## 3    3   くろ 猫    ♂
+## 4    4   みけ 猫    ♀
+## 5    5   ぶち 猫    ♂
+## 6    6   ぽち 犬    ♀</code></pre>
+<pre class="r"><code>head(dat, n = 3)  #n:行数</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 1    1   たま 猫    ♂
+## 2    2   しろ 猫    ♀
+## 3    3   くろ 猫    ♂</code></pre>
+<pre class="r"><code>tail(dat)</code></pre>
+<pre><code>##    年齢 呼び名 種 性別
+## 5     5   ぶち 猫    ♂
+## 6     6   ぽち 犬    ♀
+## 7     7   ころ 犬    ♂
+## 8     8   &lt;NA&gt; 犬    ♀
+## 9     9   じろ 犬    ♂
+## 10   10   わん 犬    ♀</code></pre>
+<pre class="r"><code>tail(dat, n = 3)</code></pre>
+<pre><code>##    年齢 呼び名 種 性別
+## 8     8   &lt;NA&gt; 犬    ♀
+## 9     9   じろ 犬    ♂
+## 10   10   わん 犬    ♀</code></pre>
+</div>
+<div class="section level3">
+<h3>データのタイプをチェック</h3>
+<pre class="r"><code>class(dat)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>str(dat)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    10 obs. of  4 variables:
+##  $ 年齢  : int  1 2 3 4 5 6 7 8 9 10
+##  $ 呼び名: chr  &quot;たま&quot; &quot;しろ&quot; &quot;くろ&quot; &quot;みけ&quot; ...
+##  $ 種    : chr  &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; ...
+##  $ 性別  : chr  &quot;♂&quot; &quot;♀&quot; &quot;♂&quot; &quot;♀&quot; ...</code></pre>
+</div>
+<div class="section level3">
+<h3>個別のベクトルへアクセス</h3>
+<pre class="r"><code>dat$年齢</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code>class(dat$呼び名)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>class(dat$年齢)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>データフレーム内の要素へアクセス</h3>
+<pre class="r"><code>dat[2, 3]</code></pre>
+<pre><code>## [1] &quot;猫&quot;</code></pre>
+<pre class="r"><code>dat[3, ]</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 3    3   くろ 猫    ♂</code></pre>
+<pre class="r"><code>dat[, 3]</code></pre>
+<pre><code>##  [1] &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;猫&quot; &quot;犬&quot; &quot;犬&quot; &quot;犬&quot; &quot;犬&quot; &quot;犬&quot;</code></pre>
+<pre class="r"><code>dat[2:3, ]</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 2    2   しろ 猫    ♀
+## 3    3   くろ 猫    ♂</code></pre>
+<pre class="r"><code>dat[1, 2:3]</code></pre>
+<pre><code>##   呼び名 種
+## 1   たま 猫</code></pre>
+<pre class="r"><code>dat[c(2, 4), ]</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 2    2   しろ 猫    ♀
+## 4    4   みけ 猫    ♀</code></pre>
+<pre class="r"><code>dat[, &quot;呼び名&quot;]</code></pre>
+<pre><code>##  [1] &quot;たま&quot; &quot;しろ&quot; &quot;くろ&quot; &quot;みけ&quot; &quot;ぶち&quot; &quot;ぽち&quot; &quot;ころ&quot; NA     &quot;じろ&quot; &quot;わん&quot;</code></pre>
+<pre class="r"><code>dat[, c(&quot;呼び名&quot;, &quot;年齢&quot;)]</code></pre>
+<pre><code>##    呼び名 年齢
+## 1    たま    1
+## 2    しろ    2
+## 3    くろ    3
+## 4    みけ    4
+## 5    ぶち    5
+## 6    ぽち    6
+## 7    ころ    7
+## 8    &lt;NA&gt;    8
+## 9    じろ    9
+## 10   わん   10</code></pre>
+<pre class="r"><code>dat[2, 2] &lt;- &quot;こじろう&quot;  #値を上書き
+dat[is.na(dat$呼び名), ]  #欠損値を含む行</code></pre>
+<pre><code>##   年齢 呼び名 種 性別
+## 8    8   &lt;NA&gt; 犬    ♀</code></pre>
+<pre class="r"><code>dat[dat$年齢 &lt; 5, ]  #年齢が５歳以下のサンプル</code></pre>
+<pre><code>##   年齢   呼び名 種 性別
+## 1    1     たま 猫    ♂
+## 2    2 こじろう 猫    ♀
+## 3    3     くろ 猫    ♂
+## 4    4     みけ 猫    ♀</code></pre>
+<pre class="r"><code>dat[dat$呼び名 %in% c(&quot;ころ&quot;, &quot;じろ&quot;), c(2, 4)]</code></pre>
+<pre><code>##   呼び名 性別
+## 7   ころ    ♂
+## 9   じろ    ♂</code></pre>
+</div>
+<div class="section level3">
+<h3>個別のベクトルを抽出</h3>
+<pre class="r"><code>dat2 &lt;- dat$呼び名
+class(dat2)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+</div>
+<div class="section level3">
+<h3>データフレーム内にある個別のベクトルをデータフレームとして抽出</h3>
+<pre class="r"><code>dat2 &lt;- dat[, &quot;呼び名&quot;, drop = FALSE]
+class(dat2)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+</div>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://darumalab.github.io/js/jquery.min.js"></script>
+<script src="https://darumalab.github.io/js/bootstrap.min.js"></script>
+<script src="https://darumalab.github.io/js/jquery.cookie.js"> </script>
+<script src="https://darumalab.github.io/js/ekko-lightbox.js"></script>
+<script src="https://darumalab.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://darumalab.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://darumalab.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://darumalab.github.io/js/owl.carousel.min.js"></script>
+<script src="https://darumalab.github.io/js/front.js"></script>
+
+</body>
+</html>

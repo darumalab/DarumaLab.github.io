@@ -167,58 +167,58 @@ ga('send', 'pageview');
 
 
 <div class="video-container">
-<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/fQc4gWjyoZc" frameborder="0">
+<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/fQc4gWjyoZc" frameborder="0" allowfullscreen>
 </iframe>
 </div>
-<div class="section level2">
-<h2>数値データ</h2>
+<div class="section level3">
+<h3>数値データ</h3>
 <pre class="r"><code>num &lt;- 7</code></pre>
 </div>
-<div class="section level2">
-<h2>オブジェクトが数値データなのかチェック</h2>
+<div class="section level3">
+<h3>オブジェクトが数値データなのかチェック</h3>
 <pre class="r"><code>is.numeric(num)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>class(num)</code></pre>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
-<div class="section level2">
-<h2>オブジェクトが整数なのかチェック</h2>
+<div class="section level3">
+<h3>オブジェクトが整数なのかチェック</h3>
 <pre class="r"><code>is.integer(num)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>num2 &lt;- 7L
 is.integer(num2)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 </div>
-<div class="section level2">
-<h2>文字列データ</h2>
+<div class="section level3">
+<h3>文字列データ</h3>
 <pre class="r"><code>char &lt;- &quot;テキスト&quot;
 char2 &lt;- factor(&quot;テキスト&quot;)  #文字列をファクターとして保存</code></pre>
 </div>
-<div class="section level2">
-<h2>オブジェクトが文字列データなのかチェック</h2>
+<div class="section level3">
+<h3>オブジェクトが文字列データなのかチェック</h3>
 <pre class="r"><code>is.character(char)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>class(char)</code></pre>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
-<div class="section level2">
-<h2>論理データ</h2>
+<div class="section level3">
+<h3>論理データ</h3>
 <pre class="r"><code>logi &lt;- TRUE
 logi2 &lt;- FALSE
 logi3 &lt;- NA</code></pre>
 </div>
-<div class="section level2">
-<h2>オブジェクトが論理データなのかチェック</h2>
+<div class="section level3">
+<h3>オブジェクトが論理データなのかチェック</h3>
 <pre class="r"><code>is.logical(logi)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 </div>
-<div class="section level2">
-<h2>日付データ</h2>
+<div class="section level3">
+<h3>日付データ</h3>
 <pre class="r"><code>date &lt;- as.Date(&quot;YYYY-MM-DD&quot;)  #例:2017-04-15
 date2 &lt;- as.POSIXct(&quot;YYYY-MM-DD 00:00&quot;)</code></pre>
 </div>
-<div class="section level2">
-<h2>オブジェクトが日付データなのかチェック</h2>
+<div class="section level3">
+<h3>オブジェクトが日付データなのかチェック</h3>
 <pre class="r"><code>class(date)</code></pre>
 </div>
 
