@@ -25,7 +25,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ###データの読み込み
 
 <div class="video-container">
-<iframe class="center_iframe" width="560" height="315" src="https://www.youtube.com/embed/9vyK7WTjQus" frameborder="0" allowfullscreen></iframe>
+<iframe class="center_iframe" width="560" height="315" src="https://youtube.com/embed/aFMfL-ZCeAo" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
