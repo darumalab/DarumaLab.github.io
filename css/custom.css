@@ -53,7 +53,7 @@ SIDEBAR + RIGHT COLUMN
 }
 .sidebar-menu {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 40px;
   margin-bottom: 40px;
 }
 .sidebar-menu li {
@@ -85,6 +85,9 @@ SIDEBAR + RIGHT COLUMN
 }
 .content-column {
   padding-top: 40px;
+  padding-left: 0px; /*added*/
+  padding-right: 0px;  /*added*/
+  padding-bottom: 10px;  /*added*/
 }
 .content-column.white-background {
   background: #fff;
@@ -95,9 +98,9 @@ SIDEBAR + RIGHT COLUMN
   overflow-y: hidden;
 }
 .content-column-content {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding-left: 0px; /*20*/
+  padding-right: 0px;  /*20*/
+  padding-bottom: 0px;  /*20*/
 }
 @media (min-width: 1200px) {
   .content-column-content {
@@ -177,22 +180,22 @@ OFF-CANVAS SIDEBAR BEHAVIOUR
     /* 6 columns */
   }
   .row-offcanvas-left .sidebar-offcanvas {
-    left: -48%;
-    /* 6 columns */
+    left: -68%; 
+    /* 6 columns  old val:48*/
   }
   .row-offcanvas-right.active {
     right: 50%;
     /* 6 columns */
   }
   .row-offcanvas-left.active {
-    left: 50%;
-    /* 6 columns */
+    left: 68%;
+    /* 6 columns  old val: 50*/
   }
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 50%;
-    /* 6 columns */
+    width: 65%;
+    /* 6 columns  old val:50*/
   }
 }
 

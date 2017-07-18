@@ -19,13 +19,12 @@
       
       <guid>https://darumalab.github.io/bootcamp/2017-07-16-tutorials/</guid>
       <description>Part 3: R言語 オブジェクト - R Objects
-オブジェクトの基本的な扱い方  Part 4: R言語 データのタイプ - R Data Types
-Rでよく使われるデータのタイプ  Part 5: R言語 ベクトルの扱い方 - R Vectors
-ベクトルの作成と基本的な操作について  Part 6: R言語 NA 欠損値 - R Missing Data
-欠損値の扱い方について  Part 7: R言語 行列 - R Matrices
-行列の作成と操作について  Part 8: R言語 データフレーム - R Data Frame
-データフレームの作成と操作について  Part 9: R言語 リスト - R Lists
-リストの作成と操作について  Part 10: R言語 データの読み込み - R Importing Data</description>
+オブジェクトの基本的な扱い方   Part 4: R言語 データのタイプ - R Data Types
+Rでよく使われるデータのタイプ   Part 5: R言語 ベクトルの扱い方 - R Vectors
+ベクトルの作成と基本的な操作について   Part 6: R言語 NA 欠損値 - R Missing Data
+欠損値の扱い方について   Part 7: R言語 行列 - R Matrices
+行列の作成と操作について   Part 8: R言語 データフレーム - R Data Frame
+データフレームの作成と操作について   Part 9: R言語 リスト - R Lists</description>
     </item>
     
     <item>
