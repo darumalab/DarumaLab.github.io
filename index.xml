@@ -71,13 +71,13 @@
       <pubDate>Sun, 16 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/bootcamp/2017-07-16-tutorials/</guid>
-      <description>Part 3: R言語 オブジェクト - R Objects
+      <description>Part 2: R言語 RStudio
+RStudioについて   Part 3: R言語 オブジェクト - R Objects
 オブジェクトの基本的な扱い方   Part 4: R言語 データのタイプ - R Data Types
 Rでよく使われるデータのタイプ   Part 5: R言語 ベクトルの扱い方 - R Vectors
 ベクトルの作成と基本的な操作について   Part 6: R言語 NA 欠損値 - R Missing Data
 欠損値の扱い方について   Part 7: R言語 行列 - R Matrices
-行列の作成と操作について   Part 8: R言語 データフレーム - R Data Frame
-データフレームの作成と操作について   Part 9: R言語 リスト - R Lists</description>
+行列の作成と操作について   Part 8: R言語 データフレーム - R Data Frame</description>
     </item>
     
     <item>
@@ -87,6 +87,22 @@ Rでよく使われるデータのタイプ   Part 5: R言語 ベクトルの扱
       
       <guid>https://darumalab.github.io/bootcamp/2017-07-14-import/</guid>
       <description>データの読み込み    CSVファルの読み込み dat1 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;,&amp;quot;)  タブ区切りファイルの読み込み dat2 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;\t&amp;quot;)  URLからデータを読み込み datPath &amp;lt;- &amp;quot;&amp;quot; dat3 &amp;lt;- read.table(file = datPath, header = TRUE, sep = &amp;quot;,&amp;quot;)  日本語のファイルを読み込む時にエラーが発生する場合 dat1 &amp;lt;- read.table(file = file.choose(), header = TRUE, sep = &amp;quot;,&amp;quot;, fileEncoding = &amp;quot;CP932&amp;quot;)  CSVファイルの書き出し datPath &amp;lt;- &amp;quot;&amp;quot; write.csv(dat1, file = datPath, row.</description>
+    </item>
+    
+    <item>
+      <title>R言語 RStudioの紹介</title>
+      <link>https://darumalab.github.io/bootcamp/2017-07-13-rstudio/</link>
+      <pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/bootcamp/2017-07-13-rstudio/</guid>
+      <description>RStudioはR言語のオープンソース1のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。こRStudioを使うメリットとは何でしょうか？
+RStudioを使うメリット プログラミングに使うコード、データ、データ分析の結果をプロジェクトごとに管理できる データ分析をアシストする多彩な機能が使える。例えばプロットのウィンドでは、チャートやグラフのサイズを手軽に調整したり、ファイル形式を指定して保存することができる。（jpg/png/pdf/svg/postscript/png/…）その他にもデータの読み込み、バージョンコントロールのアシスタント機能などがある プログラムを記述する時に、自動補完機能を使って事前に入力したコードから自動的にミスを修正したり入力を省略することができる。コードスニペットを使うとコードを簡単に挿入できる 作業の結果は、R MarkdownやR Notebookを使ってドキュメントにまとめられる。ドキュメントはRPubsで共有できる   RStudioの導入 R言語のダウンロード:
+- R for Windows
+- R for Mac
+RStudioのダウンロード:
+- RStudio: Choose Your Version of RStudio
+ RStudio エディター  RStudioを起動した直後のインターフェイスです。エディターのウィンドウでプログラムの記述、編集を行います。メニューのTools → New File → R Scriptから新しいエディターを開きます。記述したプログラムをハイライトして、Runのボタン、またはキーボードでCommand + Enterを入力するとプログラムを実行できます。その他のキーボードのショートカットは、メニューのTools → Keyboard Shortcuts Helpで確認します。  RStudio コンソール  コンソールは、エディターで記述したプログラムを実行するウィンドウです。コンソールに直接プログラムを入力することもできます。  RStudio ワーキングスペース  ワーキングスペースは、読み込んだデータや作成したオブジェクトを保存するウィンドウです。データ/オブジェクトの属性が表示されます。Historyのパネルでは過去に実行したコマンドが表示されます。  RStudio ファイル、プロット、ヘルプ、ビューワー  Filesのパネルからワーキングディレクトリにあるフォルダー/ファイルを管理します。Plotsのパネルで作成したチャートを確認/保存します。PackagesのパネルからRのパッケージ（拡張機能）をインストール/アンインストールできます。HelpのパネルからR言語のヘルプドキュメントを呼び出せます。Viewerでローカルのウェブコンテンツを表示します。   開発コードはGithubで公開されています↩
+   </description>
     </item>
     
     <item>

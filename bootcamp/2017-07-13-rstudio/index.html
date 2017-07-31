@@ -2,18 +2,18 @@
 <html lang="ja">
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Rプログラミングと統計</title>
+<title>R言語 RStudioの紹介</title>
 <meta name="google-site-verification" content="sSS12Kryadwyu3UdS1HZOY2j6UWrTIyngeyFXmOnIVE" />
-<meta name="description" content="R言語の初心者向けチュートリアル"/>
-<meta property="og:title" content="Rプログラミングと統計 - ベイカー・ストリート">
+<meta name="description" content="R言語のチュートリアル Part 2: RStudioを使うメリット"/>
+<meta property="og:title" content="R言語 RStudioの紹介 - ベイカー・ストリート">
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://darumalab.github.io/bootcamp/2017-07-16-tutorials/" />
-<meta property="og:description" content="R言語の初心者向けチュートリアル">
+<meta property="og:url" content="https://darumalab.github.io/bootcamp/2017-07-13-rstudio/" />
+<meta property="og:description" content="R言語のチュートリアル Part 2: RStudioを使うメリット">
 <meta property="og:site_name" content="ベイカー・ストリート" />
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://darumalab.github.io/img/icon/top_icon_bigger.jpg" />
-<meta property="article:section" content="r言語" />
-<meta property="article:published_time" content="2017-07-16 00:00:00 &#43;0000 UTC" />
+
+<meta property="article:published_time" content="2017-07-13 00:00:00 &#43;0000 UTC" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
@@ -26,13 +26,13 @@
         { 
           "@context": "http://schema.org", 
           "@type": "WebSite", 
-          "url": "https://darumalab.github.io/bootcamp/2017-07-16-tutorials/", 
-          "name": "Rプログラミングと統計",
+          "url": "https://darumalab.github.io/bootcamp/2017-07-13-rstudio/", 
+          "name": "R言語 RStudioの紹介",
            "author": {
               "@type": "Person",
               "name": "斉藤ジョー"
             },
-          "description": "R言語の初心者向けチュートリアル",
+          "description": "R言語のチュートリアル Part 2: RStudioを使うメリット",
         }
         </script>
         
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="https://darumalab.github.io/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.carousel.css">
 <link rel="stylesheet" href="https://darumalab.github.io/css/owl.theme.css">
-<link rel="canonical" href="https://darumalab.github.io/bootcamp/2017-07-16-tutorials/" />
+<link rel="canonical" href="https://darumalab.github.io/bootcamp/2017-07-13-rstudio/" />
 <link rel="author" href="https://plus.google.com/u/1/110782802254248820154"/>
 <link rel="stylesheet" href="https://darumalab.github.io/css/highlight.css">
 <script src="https://darumalab.github.io/js/highlight.pack.js"></script>
@@ -162,52 +162,67 @@ ga('send', 'pageview');
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
-         <h1>Rプログラミングと統計</h1>
-         <p> </p>
+         <h1>R言語 RStudioの紹介</h1>
+         <p><a href="https://www.rstudio.com/">RStudio</a>は<a href="https://cran.r-project.org/">R言語</a>のオープンソース<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。こRStudioを使うメリットとは何でしょうか？</p>
+<div id="rstudio" class="section level3">
+<h3>RStudioを使うメリット</h3>
+<ol style="list-style-type: decimal">
+<li>プログラミングに使うコード、データ、データ分析の結果をプロジェクトごとに管理できる</li>
+<li>データ分析をアシストする多彩な機能が使える。例えばプロットのウィンドでは、チャートやグラフのサイズを手軽に調整したり、ファイル形式を指定して保存することができる。（jpg/png/pdf/svg/postscript/png/…）その他にもデータの読み込み、<a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">バージョンコントロール</a>のアシスタント機能などがある</li>
+<li>プログラムを記述する時に、自動補完機能を使って事前に入力したコードから自動的にミスを修正したり入力を省略することができる。<a href="https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets">コードスニペット</a>を使うとコードを簡単に挿入できる</li>
+<li>作業の結果は、<a href="http://rmarkdown.rstudio.com/">R Markdown</a>や<a href="http://rmarkdown.rstudio.com/r_notebooks.html">R Notebook</a>を使ってドキュメントにまとめられる。ドキュメントは<a href="http://rpubs.com/">RPubs</a>で共有できる</li>
+</ol>
+</div>
+<div id="rstudio" class="section level3">
+<h3>RStudioの導入</h3>
+<p>R言語のダウンロード:<br />
+- <a href="https://cran.r-project.org/bin/windows/base/">R for Windows</a><br />
+- <a href="https://cran.r-project.org/bin/macosx/">R for Mac</a></p>
+<p>RStudioのダウンロード:<br />
+- <a href="https://www.rstudio.com/products/rstudio/download/">RStudio: Choose Your Version of RStudio</a></p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio エディター</h3>
 <p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-13-objects/"> <img src="https://darumalab.github.io/bootcamp/img/p3_studio.jpg" alt="RStudio" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-13-rstudio/">Part 2: R言語 RStudio</a></b><br />
-RStudioについて
+<img src="https://darumalab.github.io/bootcamp/img/p2_rstudio_window2.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
 </p>
-<hr>
+<p>
+RStudioを起動した直後のインターフェイスです。エディターのウィンドウでプログラムの記述、編集を行います。メニューのTools → New File → R Scriptから新しいエディターを開きます。記述したプログラムをハイライトして、Runのボタン、またはキーボードでCommand + Enterを入力するとプログラムを実行できます。その他のキーボードのショートカットは、メニューのTools → Keyboard Shortcuts Helpで確認します。
+</p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio コンソール</h3>
 <p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-13-objects/"> <img src="https://darumalab.github.io/bootcamp/img/p3_objects.jpg" alt="R Objects" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-13-objects/">Part 3: R言語 オブジェクト - R Objects</a></b><br />
-オブジェクトの基本的な扱い方
+<img src="https://darumalab.github.io/bootcamp/img/p2_rstudio_window3.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
 </p>
-<hr>
+<p>
+コンソールは、エディターで記述したプログラムを実行するウィンドウです。コンソールに直接プログラムを入力することもできます。
+</p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio ワーキングスペース</h3>
 <p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-17-type/"> <img src="https://darumalab.github.io/bootcamp/img/p4_data_type.jpg" alt="R Data types" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-17-type/">Part 4: R言語 データのタイプ - R Data Types</a></b><br />
-Rでよく使われるデータのタイプ
+<img src="https://darumalab.github.io/bootcamp/img/p2_rstudio_window4.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
 </p>
-<hr>
+<p>
+ワーキングスペースは、読み込んだデータや作成したオブジェクトを保存するウィンドウです。データ/オブジェクトの属性が表示されます。Historyのパネルでは過去に実行したコマンドが表示されます。
+</p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio ファイル、プロット、ヘルプ、ビューワー</h3>
 <p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-17-vectors/"> <img src="https://darumalab.github.io/bootcamp/img/p5_vectors.jpg" alt="R Vectors" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-17-vectors/">Part 5: R言語 ベクトルの扱い方 - R Vectors</a></b><br />
-ベクトルの作成と基本的な操作について
+<img src="https://darumalab.github.io/bootcamp/img/p2_rstudio_window5.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
 </p>
-<hr>
-<p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-17-na/"> <img src="https://darumalab.github.io/bootcamp/img/p6_na.jpg" alt="R NA" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-17-na/">Part 6: R言語 NA 欠損値 - R Missing Data</a></b><br />
-欠損値の扱い方について
+<p>
+Filesのパネルからワーキングディレクトリにあるフォルダー/ファイルを管理します。Plotsのパネルで作成したチャートを確認/保存します。PackagesのパネルからRのパッケージ（拡張機能）をインストール/アンインストールできます。HelpのパネルからR言語のヘルプドキュメントを呼び出せます。Viewerでローカルのウェブコンテンツを表示します。
 </p>
-<hr>
-<p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-17-matrices/"> <img src="https://darumalab.github.io/bootcamp/img/p7_matrices.jpg" alt="R Matrices" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-17-matrices/">Part 7: R言語 行列 - R Matrices</a></b><br />
-行列の作成と操作について
-</p>
-<hr>
-<p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-17-dataframe/"> <img src="https://darumalab.github.io/bootcamp/img/p8_data_frame.jpg" alt="R Data Frame" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-17-dataframe/">Part 8: R言語 データフレーム - R Data Frame</a></b><br />
-データフレームの作成と操作について
-</p>
-<hr>
-<p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-17-lists/"> <img src="https://darumalab.github.io/bootcamp/img/p9_lists.jpg" alt="R Lists" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-17-lists/">Part 9: R言語 リスト - R Lists</a></b><br />
-リストの作成と操作について
-</p>
-<hr>
-<p style="display: inline-block;">
-<a href="https://darumalab.github.io/bootcamp/2017-07-14-import/"> <img src="https://darumalab.github.io/bootcamp/img/p10_excel.jpg" alt="R Data Import" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" /> </a> <b><a href="https://darumalab.github.io/bootcamp/2017-07-14-import/">Part 10: R言語 データの読み込み - R Importing Data</a></b><br />
-エクセル等のデータの読み込み方
-</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://github.com/rstudio">開発コードはGithubで公開されています</a><a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
 
          
       </div>
