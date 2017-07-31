@@ -1,0 +1,54 @@
+---
+date: "2017-07-13"
+title: "R言語 RStudioの紹介"
+author: "斉藤ジョー"
+showonlyimage: false
+draft: false
+image: ""
+image2: "bootcamp/img/p2_rstudio.jpg"
+weight: 0
+type: ""
+description: "R言語のチュートリアル Part 2: RStudioを使うメリット"
+---
+
+[RStudio](https://www.rstudio.com/)は[R言語](https://cran.r-project.org/)のオープンソース^[[開発コードはGithubで公開されています](https://github.com/rstudio)]のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。こRStudioを使うメリットとは何でしょうか？
+
+### RStudioを使うメリット
+
+1. プログラミングに使うコード、データ、データ分析の結果をプロジェクトごとに管理できる
+2. データ分析をアシストする多彩な機能が使える。例えばプロットのウィンドでは、チャートやグラフのサイズを手軽に調整したり、ファイル形式を指定して保存することができる。（jpg/png/pdf/svg/postscript/png/...）その他にもデータの読み込み、[バージョンコントロール](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)のアシスタント機能などがある
+4. プログラムを記述する時に、自動補完機能を使って事前に入力したコードから自動的にミスを修正したり入力を省略することができる。[コードスニペット](https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets)を使うとコードを簡単に挿入できる
+3. 作業の結果は、[R Markdown](http://rmarkdown.rstudio.com/)や[R Notebook](http://rmarkdown.rstudio.com/r_notebooks.html)を使ってドキュメントにまとめられる。ドキュメントは[RPubs](http://rpubs.com/)で共有できる
+
+
+### RStudioの導入
+R言語のダウンロード:  
+- [R for Windows](https://cran.r-project.org/bin/windows/base/)  
+- [R for Mac](https://cran.r-project.org/bin/macosx/)
+
+RStudioのダウンロード:  
+- [RStudio: Choose Your Version of RStudio](https://www.rstudio.com/products/rstudio/download/)
+
+### RStudio エディター
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window2.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>RStudioを起動した直後のインターフェイスです。エディターのウィンドウでプログラムの記述、編集を行います。メニューのTools → New File → R Scriptから新しいエディターを開きます。記述したプログラムをハイライトして、Runのボタン、またはキーボードでCommand + Enterを入力するとプログラムを実行できます。その他のキーボードのショートカットは、メニューのTools → Keyboard Shortcuts Helpで確認します。</p>
+### RStudio コンソール
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window3.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>コンソールは、エディターで記述したプログラムを実行するウィンドウです。コンソールに直接プログラムを入力することもできます。</p>
+### RStudio ワーキングスペース
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window4.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>ワーキングスペースは、読み込んだデータや作成したオブジェクトを保存するウィンドウです。データ/オブジェクトの属性が表示されます。Historyのパネルでは過去に実行したコマンドが表示されます。</p>
+### RStudio ファイル、プロット、ヘルプ、ビューワー
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window5.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>Filesのパネルからワーキングディレクトリにあるフォルダー/ファイルを管理します。Plotsのパネルで作成したチャートを確認/保存します。PackagesのパネルからRのパッケージ（拡張機能）をインストール/アンインストールできます。HelpのパネルからR言語のヘルプドキュメントを呼び出せます。Viewerでローカルのウェブコンテンツを表示します。</p>
+
+
+

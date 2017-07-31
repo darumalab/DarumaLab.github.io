@@ -14,7 +14,14 @@ categories: ["r言語"]
 
 ---
 &nbsp;
-
+  
+<p style="display: inline-block;">
+<a href="/bootcamp/2017-07-13-objects/">
+<img src="/bootcamp/img/p3_studio.jpg" alt="RStudio" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" />
+</a>
+<b>[Part 2: R言語 RStudio](/bootcamp/2017-07-13-rstudio/)</b>  
+RStudioについて
+</p><hr>
 <p style="display: inline-block;">
 <a href="/bootcamp/2017-07-13-objects/">
 <img src="/bootcamp/img/p3_objects.jpg" alt="R Objects" style="float: left; margin-left: 5px; margin-bottom: 5px; width: 25%;" />

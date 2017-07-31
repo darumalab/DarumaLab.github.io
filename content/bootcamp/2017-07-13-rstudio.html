@@ -1,0 +1,75 @@
+---
+date: "2017-07-13"
+title: "R言語 RStudioの紹介"
+author: "斉藤ジョー"
+showonlyimage: false
+draft: false
+image: ""
+image2: "bootcamp/img/p2_rstudio.jpg"
+weight: 0
+type: ""
+description: "R言語のチュートリアル Part 2: RStudioを使うメリット"
+---
+
+
+
+<p><a href="https://www.rstudio.com/">RStudio</a>は<a href="https://cran.r-project.org/">R言語</a>のオープンソース<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。こRStudioを使うメリットとは何でしょうか？</p>
+<div id="rstudio" class="section level3">
+<h3>RStudioを使うメリット</h3>
+<ol style="list-style-type: decimal">
+<li>プログラミングに使うコード、データ、データ分析の結果をプロジェクトごとに管理できる</li>
+<li>データ分析をアシストする多彩な機能が使える。例えばプロットのウィンドでは、チャートやグラフのサイズを手軽に調整したり、ファイル形式を指定して保存することができる。（jpg/png/pdf/svg/postscript/png/…）その他にもデータの読み込み、<a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">バージョンコントロール</a>のアシスタント機能などがある</li>
+<li>プログラムを記述する時に、自動補完機能を使って事前に入力したコードから自動的にミスを修正したり入力を省略することができる。<a href="https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets">コードスニペット</a>を使うとコードを簡単に挿入できる</li>
+<li>作業の結果は、<a href="http://rmarkdown.rstudio.com/">R Markdown</a>や<a href="http://rmarkdown.rstudio.com/r_notebooks.html">R Notebook</a>を使ってドキュメントにまとめられる。ドキュメントは<a href="http://rpubs.com/">RPubs</a>で共有できる</li>
+</ol>
+</div>
+<div id="rstudio" class="section level3">
+<h3>RStudioの導入</h3>
+<p>R言語のダウンロード:<br />
+- <a href="https://cran.r-project.org/bin/windows/base/">R for Windows</a><br />
+- <a href="https://cran.r-project.org/bin/macosx/">R for Mac</a></p>
+<p>RStudioのダウンロード:<br />
+- <a href="https://www.rstudio.com/products/rstudio/download/">RStudio: Choose Your Version of RStudio</a></p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio エディター</h3>
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window2.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>
+RStudioを起動した直後のインターフェイスです。エディターのウィンドウでプログラムの記述、編集を行います。メニューのTools → New File → R Scriptから新しいエディターを開きます。記述したプログラムをハイライトして、Runのボタン、またはキーボードでCommand + Enterを入力するとプログラムを実行できます。その他のキーボードのショートカットは、メニューのTools → Keyboard Shortcuts Helpで確認します。
+</p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio コンソール</h3>
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window3.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>
+コンソールは、エディターで記述したプログラムを実行するウィンドウです。コンソールに直接プログラムを入力することもできます。
+</p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio ワーキングスペース</h3>
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window4.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>
+ワーキングスペースは、読み込んだデータや作成したオブジェクトを保存するウィンドウです。データ/オブジェクトの属性が表示されます。Historyのパネルでは過去に実行したコマンドが表示されます。
+</p>
+</div>
+<div id="rstudio-" class="section level3">
+<h3>RStudio ファイル、プロット、ヘルプ、ビューワー</h3>
+<p style="display: inline-block;">
+<img src="/bootcamp/img/p2_rstudio_window5.jpg" alt="RStudio Image" style="float: center; width: 100%;" />
+</p>
+<p>
+Filesのパネルからワーキングディレクトリにあるフォルダー/ファイルを管理します。Plotsのパネルで作成したチャートを確認/保存します。PackagesのパネルからRのパッケージ（拡張機能）をインストール/アンインストールできます。HelpのパネルからR言語のヘルプドキュメントを呼び出せます。Viewerでローカルのウェブコンテンツを表示します。
+</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://github.com/rstudio">開発コードはGithubで公開されています</a><a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
