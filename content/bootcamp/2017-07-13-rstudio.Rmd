@@ -11,12 +11,12 @@ type: ""
 description: "R言語のチュートリアル Part 2: RStudioを使うメリット"
 ---
 
-[RStudio](https://www.rstudio.com/)は[R言語](https://cran.r-project.org/)のオープンソース^[[開発コードはGithubで公開されています](https://github.com/rstudio)]のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。こRStudioを使うメリットとは何でしょうか？
+[RStudio](https://www.rstudio.com/)は[R言語](https://cran.r-project.org/)のオープンソース^[[開発コードはGithubで公開されています](https://github.com/rstudio)]のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。
 
 ### RStudioを使うメリット
 
 1. プログラミングに使うコード、データ、データ分析の結果をプロジェクトごとに管理できる
-2. データ分析をアシストする多彩な機能が使える。例えばプロットのウィンドでは、チャートやグラフのサイズを手軽に調整したり、ファイル形式を指定して保存することができる。（jpg/png/pdf/svg/postscript/png/...）その他にもデータの読み込み、[バージョンコントロール](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)のアシスタント機能などがある
+2. データ分析をアシストする多彩な機能が用意されている。例えばプロットのウィンドでは、チャートやグラフのサイズを手軽に調整したり、ファイル形式を指定して保存することができる。（jpg/png/pdf/svg/postscript/png/...）その他にもデータの読み込み、[バージョンコントロール](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)のアシスタント機能などがある
 4. プログラムを記述する時に、自動補完機能を使って事前に入力したコードから自動的にミスを修正したり入力を省略することができる。[コードスニペット](https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets)を使うとコードを簡単に挿入できる
 3. 作業の結果は、[R Markdown](http://rmarkdown.rstudio.com/)や[R Notebook](http://rmarkdown.rstudio.com/r_notebooks.html)を使ってドキュメントにまとめられる。ドキュメントは[RPubs](http://rpubs.com/)で共有できる
 
