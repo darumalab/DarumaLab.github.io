@@ -39,7 +39,7 @@ tags: ["チャート","対数","線形","charts","log","linear"]
 <p>1885年の秋のある日、アーサー・ドイルは株式仲買店員の友人に稼ぎの一部を預けることにした。大学卒業後、開業した診療所の仕事がやっと軌道に乗りはじめていた。経済的に困っていたわけではなく、資金繰りが苦しい友人を助けるつもりだった。預けたソブリン金貨には複利の利子がつく。「金貨は必ず毎年0.5倍ずつ増えていく」</p>
 </div>
 <div id="linear" class="section level3">
-<h3>線形目盛</h3>
+<h3>R言語: 線形目盛</h3>
 <pre class="r"><code>time &lt;- 1:10  # 貯蓄期間
 r &lt;- 0.5  # 成長率
 a &lt;- 10  # 預けた金貨
@@ -54,7 +54,7 @@ plt + scale_y_continuous(breaks = seq(0, 1000, by = 100)) + scale_x_continuous(b
 <p>アーサーは友人に渡された線形目盛のチャートをながめながら、5年目から10年目の金貨の増え方に比べて、1年目から5年目までの金貨の増え方が分かりづらいと思った。アーサーは友人に新しいチャートを用意させることにした。「5年目までの金貨の増え方をもっと分かりやすく見せてくれ」</p>
 </div>
 <div id="log" class="section level3">
-<h3>対数目盛</h3>
+<h3>R言語: 対数目盛</h3>
 <pre class="r"><code>plt &lt;- qplot(seq_along(y), log(y), xlab = &quot;年数&quot;, ylab = &quot;log(金貨)&quot;)
 plt + scale_x_continuous(breaks = seq(0, 10, by = 1))</code></pre>
 <p><img src="/blog/logarithmic_scale_files/figure-html/unnamed-chunk-4-1.png" width="95%" /></p>
