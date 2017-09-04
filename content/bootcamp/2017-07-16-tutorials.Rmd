@@ -20,7 +20,7 @@ categories: ["r言語"]
 
 Data Campには、データサイエンスの有料のオンラインコースが多数用意されています。R言語とPythonを使った数ある学習コースの中で特に実践的で楽しく勉強できると思います。<a href="https://www.datacamp.com/">www.datacamp.com</a>
 
-統計とR言語をとても分かりやすく教えていると感じた本は"R for everyone"です。大学でこの本に出会っていればもう少し統計科目の成績を伸ばせたと思います。これは嘘かも知れませんが、それくらい入門者にや優しい本だと思います。<a href="https://www.jaredlander.com/r-for-everyone/">www.jaredlander.com/r-for-everyone/</a>
+統計とR言語をとても分かりやすく教えていると感じた本は"R for everyone"です。大学でこの本に出会っていればもう少し統計科目の成績を伸ばせたと思います。これは嘘かも知れませんが、それくらい入門者に親切な本だと思います。<a href="https://www.jaredlander.com/r-for-everyone/">www.jaredlander.com/r-for-everyone/</a>
 
 <br><br>
 <p stylsevee="display: inline-block;">
