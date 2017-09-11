@@ -11,7 +11,8 @@ type: ""
 description: "R言語のチュートリアル Part 2: RStudioを使うメリット"
 ---
 
-[RStudio](https://www.rstudio.com/)は[R言語](https://cran.r-project.org/)のオープンソース^[[開発コードはGithubで公開されています](https://github.com/rstudio)]のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。
+[RStudio](https://www.rstudio.com/)は[R言語](https://cran.r-project.org/)のオープンソース^[[開発コードはGithubで公開されています](https://github.com/rstudio)]のIDE（統合開発環境）のことで、R言語を使ったプログラミングに欠かせないソフトウェアです。RStudioを使うことで、データの収集と管理、分析、結果の抽出まで、自分の都合に合わせて効率的にデータの情報を引き出すインフラストラクチャーを構築しやすくなります。
+
 
 ### RStudioを使うメリット
 
