@@ -12,7 +12,7 @@ image2: "blog/img/scale.jpg"
 weight: 0
 type: "post"
 
-description: "チャートを作る：線形目盛と対数目盛を使い分ける。"
+description: "チャートを作る：線形目盛と対数目盛を使い分ける"
 categories: ["r言語"]
 tags: ["チャート","対数","線形","charts","log","linear"]
 ---

@@ -13,12 +13,11 @@ description: "R言語の学習リソース"
 categories: ["r言語"]
 
 ---
-
 ### Learning R
 
 This article lists some examples of learning and teaching resources for R programming. R is a programming language for statistical computing and graphics.
 
-Data Camp, the largest learning platform online for R programming, offers  practical R and Python traning courses designed by experts from the data science industry. 
+Data Camp, the largest online learning platform for R programming, offers  practical R and Python traning courses designed by experts from the data science industry. 
 
 <i>R for Everyone</i> by Jared P. Lander helps you to master the fundamentals of R programming and a variety of statistical methods in practical exercises.
 
