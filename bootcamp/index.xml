@@ -66,23 +66,14 @@
     </item>
     
     <item>
-      <title>Rプログラミングと統計</title>
+      <title>Rプログラミングの学習 - Resources for learning R</title>
       <link>https://darumalab.github.io/bootcamp/2017-07-16-tutorials/</link>
       <pubDate>Sun, 16 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://darumalab.github.io/bootcamp/2017-07-16-tutorials/</guid>
-      <description>R言語の広まり R言語は、研究や業務に使う大量データにまつわる統計的な疑問を検証するために使われているプログラミング言語です。スクリプト - 簡易的なプログラム - によってデータの分析を組み立てて行くことができます。したがって、同じデータとスクリプトを使えば、あらゆる人がデータの分析結果を繰り返し再現することができます。アメリカでは、行政や企業など、幅広いセクターで統計分析を共有するフレームワークとして活用され始めています。
-R言語には、オープンなコミュニティやリソースが存在しています。R Bloggerでは、R言語のユーザーが投稿する最新のブログエントリーを見ることができます。R言語の新しい拡張機能やサービスの動向はここで確認できます。The R Journalでは、R言語と統計学に関する学術論文が提供されています。 Stack Overflowでは、プログラミング技術に関する情報が共有されています。R言語で発生するエラーに対処する際に、とても頼りになるコミュニティです。
- R言語の学習について R言語を本格的に学びたい方には、Data CampとR for everyoneをお勧めしています。
-Data Campでは、データサイエンスの有料のオンラインコースが多数用意されています。R言語とPythonを使った数ある学習コースの中で特に実践的で楽しく勉強できると思います。www.datacamp.com
-統計とR言語をとても分かりやすく教えていると感じた本は“R for everyone”です。大学でこの本に出会っていればもう少し統計科目の成績を伸ばせたと思います。大げさかも知れませんが、それくらい入門者に親切な本だと思います。www.jaredlander.com/r-for-everyone/
- チュートリアルについて R言語について、英語のリソースから学習したことを日本語で解説してみたくてこのチュートリアルを作り始めました。テーマを絞った学習カリキュラムの制作など、お気軽にこちらでご相談ください。
-
- Part 2: R言語 RStudio
-RStudioについて   Part 3: R言語 オブジェクト - R Objects
-オブジェクトの基本的な扱い方   Part 4: R言語 データのタイプ - R Data Types
-Rでよく使われるデータのタイプ   Part 5: R言語 ベクトルの扱い方 - R Vectors
-ベクトルの作成と基本的な操作について   Part 6: R言語 NA 欠損値 - R Missing Data</description>
+      <description>About R programming This article lists some examples of learning and teaching resources for R programming. R is a programming language for statistical computing and graphics.
+Data Camp, the largest learning platform online for R programming, offers practical R and Python traning courses designed by experts from the data science industry.
+R for Everyone by Jared P. Lander helps you to master the fundamentals of R programming and a variety of statistical methods in practical exercises.</description>
     </item>
     
     <item>

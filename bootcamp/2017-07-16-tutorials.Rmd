@@ -1,6 +1,6 @@
 ---
 date: "2017-07-16"
-title: "Rプログラミングと統計"
+title: "Rプログラミングの学習 - Resources for learning R"
 author: "斉藤ジョー"
 showonlyimage: true
 draft: false
@@ -9,12 +9,29 @@ image2: "blog/img/title_char.png"
 weight: 0
 type: "post"
 
-description: "R言語の初心者向けチュートリアル"
+description: "R言語の学習リソース"
 categories: ["r言語"]
 
 ---
 <BR>
 
+### About R programming
+
+This article lists some examples of learning and teaching resources for R programming. R is a programming language for statistical computing and graphics.
+
+Data Camp, the largest learning platform online for R programming, offers  practical R and Python traning courses designed by experts from the data science industry. 
+
+<i>R for Everyone</i> by Jared P. Lander helps you to master the fundamentals of R programming and a variety of statistical methods in practical exercises.
+
+R has an active learning community. R Blogger is a blogging community commited to connect R users with new ideas and creative projects. The R Journal regularly publish academic journals in statistical computing. When you face a programming challenge, you can always share problems at Stack Oveflow.
+
+Data Camp: <a href="https://www.datacamp.com/">www.datacamp.com</a><BR>
+R for Everyone: <a href="https://www.jaredlander.com/r-for-everyone/">www.jaredlander.com/r-for-everyone/</a><BR>
+R Blogger: <a href="https://www.r-bloggers.com/">www.r-bloggers.com/</a><BR>
+The R Journal: <a href="https://journal.r-project.org/">journal.r-project.org/</a><BR>
+Stack Overflow: <a href="https://stackoverflow.com/documentation/r/topics">stackoverflow.com/documentation/r/topics</a><BR>
+
+### To Japanese learners
 ### R言語の広まり
 
 R言語は、研究や業務に使う大量データにまつわる統計的な疑問を検証するために使われているプログラミング言語です。スクリプト - 簡易的なプログラム - によってデータの分析を組み立てて行くことができます。したがって、同じデータとスクリプトを使えば、あらゆる人がデータの分析結果を繰り返し再現することができます。アメリカでは、行政や企業など、幅広いセクターで統計分析を共有するフレームワークとして活用され始めています。
@@ -27,9 +44,10 @@ R言語を本格的に学びたい方には、Data CampとR for everyoneをお�
 
 Data Campでは、データサイエンスの有料のオンラインコースが多数用意されています。R言語とPythonを使った数ある学習コースの中で特に実践的で楽しく勉強できると思います。<a href="https://www.datacamp.com/">www.datacamp.com</a>
 
-統計とR言語をとても分かりやすく教えていると感じた本は"R for everyone"です。大学でこの本に出会っていればもう少し統計科目の成績を伸ばせたと思います。大げさかも知れませんが、それくらい入門者に親切な本だと思います。<a href="https://www.jaredlander.com/r-for-everyone/">www.jaredlander.com/r-for-everyone/</a>
+Jared Lander さんの"R for everyone"という本では、R言語を基礎から分かりやすく教えています。<a href="https://www.jaredlander.com/r-for-everyone/">www.jaredlander.com/r-for-everyone/</a><BR>
 
 ### チュートリアルについて
+
   R言語について、英語のリソースから学習したことを日本語で解説してみたくてこのチュートリアルを作り始めました。テーマを絞った学習カリキュラムの制作など、お気軽に<a href="mailto:datadaruma@gmail.com">こちら</a>でご相談ください。
 
 <br><br>
