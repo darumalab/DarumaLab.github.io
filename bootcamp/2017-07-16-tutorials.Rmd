@@ -15,7 +15,7 @@ categories: ["r言語"]
 ---
 <BR>
 
-### About R programming
+### Learning R
 
 This article lists some examples of learning and teaching resources for R programming. R is a programming language for statistical computing and graphics.
 
