@@ -1,6 +1,6 @@
 ---
 date: "2017-07-16"
-title: "Rプログラミングの学習 - Resources for learning R"
+title: "Rプログラミングの学習"
 author: "斉藤ジョー"
 showonlyimage: true
 draft: false
@@ -13,10 +13,6 @@ description: "R言語の学習リソース"
 categories: ["r言語"]
 
 ---
-
-### Learning R
-
-This article lists some examples of learning and teaching resources for R programming. 
 
 ### R言語の広まり
 
