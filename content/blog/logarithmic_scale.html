@@ -20,7 +20,7 @@ tags: ["チャート","対数","線形","charts","log","linear"]
 <link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<p>この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>さん、Gregory Kanevsky<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>さん、Hunkar Ozyasar <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>さんの記事を参考にしています。</p>
+<p>This is a post written in RMarkdown (<code>*.Rmd</code>) to understand reasons to use logarithmic scales in charts. この記事ではチャートやグラフに対数目盛りを使う目的についてまとめています。Naomi Robbins<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>さん、Gregory Kanevsky<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>さん、Hunkar Ozyasar <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>さんの記事を参考にしています。</p>
 <div class="section level3">
 <h3>キーポイント</h3>
 <p>線形目盛と対数目盛りの違い：</p>
@@ -64,7 +64,6 @@ plt + scale_x_continuous(breaks = seq(0, 10, by = 1))</code></pre>
 <p>金貨は毎年同じ増加率を達成していた。アーサーは友人に渡された対数目盛のチャートを見てとても満足した。一方の軸が対数目盛になっているチャートを<strong>片対数(semi-log)チャート</strong>と呼ぶ。<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>片対数チャートを見ると増加傾向は毎年同じ比率を保っていることが分かった。</p>
 <p>1年目から5年目まではわずかな増加だった金貨は、5年目から10年目にかけて急激に膨れ上がった。そのせいで、チャート1では1年目から5年目までの変化がはっきりしないものになっていた。チャート2ではデータの全体像を正確に捉えることができている。</p>
 <p> </p>
-<p>This is a post written in RMarkdown (<code>*.Rmd</code>) to understand reasons to use logarithmic scales in charts.</p>
 </div>
 <div class="footnotes">
 <hr />
