@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on ベイカー・ストリート</title>
+    <link>https://darumalab.github.io/tags/books/</link>
+    <description>Recent content in Books on ベイカー・ストリート</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;2016 Joe Saito</copyright>
+    <lastBuildDate>Thu, 05 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://darumalab.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books 2017-2018</title>
+      <link>https://darumalab.github.io/blog/books/</link>
+      <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darumalab.github.io/blog/books/</guid>
+      <description>I found most of them from my father’s book shelf. I particularly enjoyed reading the book by James Allen.
+2018/04/04 Sam Walton: Made In America Sam Walton John Huey
+2018/02/28 The Intelligent Investor Rev Ed． （Collins Business Essentials）Benjamin Graham
+2017/11/06 From Poverty to Power: By James Allen
+2017/10/28 アルケミスト―夢を旅した少年 パウロ コエーリョ 山川紘矢 (The Alchemist by Paul Coelho)
+2017/10/04 Built to Last: Successful Habits of Visionary Companies Jim Collins Jerry I． Porras</description>
+    </item>
+    
+  </channel>
+</rss>
