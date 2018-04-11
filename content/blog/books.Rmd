@@ -1,0 +1,29 @@
+---
+output:
+  html_document:
+    code_folding: "hide"
+date: "2018-04-05"
+title: "Books 2017-2018"
+showonlyimage: true
+draft: false
+weight: 0
+type: "post"
+
+description: "My favorite books in 2017, 2018"
+categories: ["others"]
+tags: ["books"]
+---
+
+I found most of them from my father's book shelf. I particularly enjoyed reading the book by James Allen.
+
+
+
+2018/04/04 Sam Walton: Made In America Sam Walton John Huey  
+2018/02/28 The Intelligent Investor Rev Ed． （Collins Business Essentials）Benjamin Graham  
+2017/11/06 From Poverty to Power: By James Allen  
+2017/10/28 アルケミスト―夢を旅した少年 パウロ コエーリョ 山川紘矢 (The Alchemist by Paul Coelho)  
+2017/10/04 Built to Last: Successful Habits of Visionary Companies Jim Collins Jerry I． Porras  
+2017/09/30 Who Says Elephants Can’t Dance?: Inside IBM’s Historic Turnaround Louis V．Jr． Gerstner   
+2017/09/30 Good to Great: Why Some Companies Make the Leap．．．And Others Don’t Jim Collins   
+2017/09/04 選択の科学シーナ・アイエンガー 櫻井祐子 (The Art of Choosing by Sheena Lyenger) 
+
