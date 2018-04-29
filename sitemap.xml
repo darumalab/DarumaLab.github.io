@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://darumalab.github.io/blog/alopecia-universalis/</loc>
+    <lastmod>2018-04-29T22:00:45+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://darumalab.github.io/blog/books/</loc>
     <lastmod>2018-04-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -123,14 +130,7 @@
   
   <url>
     <loc>https://darumalab.github.io/blog/</loc>
-    <lastmod>2018-04-05T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://darumalab.github.io/tags/books/</loc>
-    <lastmod>2018-04-05T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-29T22:00:45+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -163,8 +163,8 @@
   </url>
   
   <url>
-    <loc>https://darumalab.github.io/categories/others/</loc>
-    <lastmod>2018-04-05T00:00:00+00:00</lastmod>
+    <loc>https://darumalab.github.io/categories/memos/</loc>
+    <lastmod>2018-04-29T22:00:45+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -178,7 +178,7 @@
   
   <url>
     <loc>https://darumalab.github.io/tags/</loc>
-    <lastmod>2018-04-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -192,7 +192,7 @@
   
   <url>
     <loc>https://darumalab.github.io/</loc>
-    <lastmod>2018-04-05T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-29T22:00:45+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
