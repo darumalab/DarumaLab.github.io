@@ -7,7 +7,7 @@ draft: false
 weight: 0
 type: "post"
 
-description: "A short essay about my experience with Alopecia"
+description: "A writing about my experience with Alopecia"
 categories: ["memos"]
 ---
   April 29, 2018
