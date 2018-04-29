@@ -11,7 +11,7 @@ description: "A short essay about my experience with Alopecia"
 categories: ["memos"]
 ---
   April 29, 2018
-<br>  
+ <br>  
   
 During my college years, I submitted a short essay for <a href="https://thisibelieve.org/">This I Believe</a>, a National Public Radio program, with help from my sister and my teacher, Vanessa Conte. While it was not chosen to be on the program, I always wanted to share with someone my experience with Alopecia and how I had reconciled with it.
 
